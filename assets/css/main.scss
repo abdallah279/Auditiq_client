@@ -1,0 +1,162 @@
+@import "sass/variables", "sass/mixins", "sass/global", "sass/components",
+  "sass/navbar", "sass/sidebar";
+
+.main-padding-right {
+  @include dir-padding-left(280px);
+
+  @media screen and (max-width: $screen-lg) {
+    @include dir-padding-left(0px !important);
+  }
+}
+
+
+
+/**************** Start visits-cards *************/
+
+.visits-card{
+  background-color: $white;
+  box-shadow: $main-shadow;
+  padding: 22px 20px;
+  display: flex;
+  align-items: start;
+  gap: 15px;
+  border-radius: 8px;
+  transition: $main-transition;
+
+  .icon{
+      max-height: 50px;
+  }
+
+  .num{
+      font-size: 20px;
+      color: $sec;
+      margin-bottom: 10px;
+      font-family: fontMed;
+  }
+
+  .name{
+      color: $dark;
+      font-size: 16px;
+  }
+
+  &:hover{
+    box-shadow: $sec-shadow;
+  }
+}
+
+/**************** End visits-cards *************/
+
+/**************** Start Table *************/
+
+.invoices{
+  overflow-x: auto;
+  box-shadow: $main-shadow;
+  border-radius: 15px;
+
+  &::-webkit-scrollbar {
+    height: 4px;
+}
+}
+
+.invoices-table{
+  width: 100%;
+  white-space: nowrap;
+
+  thead{
+      border-bottom: 1px solid $dark2;
+      
+      th{
+          padding: 20px 10px 15px;
+          text-align: center;
+          font-size: 16px;
+          color: $dark;
+          font-weight: 500;
+          
+          @media screen and (max-width: $screen-xs) {
+              font-size: 15px;
+              padding: 15px 12px;
+          }
+      }
+  }
+
+  tbody{
+
+      tr{
+          border-bottom: 1px solid $dark2;
+
+          &:last-child{
+              border: none;
+          }
+
+          td{
+              font-size: 16px;
+              color: $dark;
+              padding: 25px 10px;
+              text-align: center;
+              vertical-align: middle;
+
+              @media screen and (max-width: $screen-xs) {
+                  font-size: 14px;
+                  padding: 15px 12px;
+              }
+
+              .info{
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  font-family: fontMed;
+
+                  .left{
+                      text-align: start;
+
+                      .name{
+                          font-size: 16px;
+                          color: $black;
+                          margin-bottom: 7px;
+                      }
+
+                      .text{
+                          font-size: 15px;
+                          color: $light;
+                      }
+                  }
+              }
+
+              .table-img{
+                  width: 60px;
+                  height: 60px;
+                  object-fit: cover;
+
+                  &.bg{
+                      width: 180px;
+                      height: 80px;
+                      object-fit: cover;
+                      border-radius: 8px;
+                  }
+              }
+
+              &.table-text{
+                  max-width: 250px;
+                  min-width: 250px;
+                  white-space: normal;
+                  line-height: 1.6;
+              }
+
+              button{
+                  background-color: transparent;
+              }
+          }
+      }
+  }
+
+  // &.light{
+  //     thead{
+          
+  //         th{
+  //             color: $light5;
+  //         }
+  //     }
+  // }
+}
+
+/**************** End Table *************/
