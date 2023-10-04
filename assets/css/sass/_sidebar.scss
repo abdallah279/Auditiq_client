@@ -68,7 +68,15 @@
                 @include dir-right(0);
                 border-width: 12px;
                 border-style: solid;
-                border-color: transparent transparent transparent $white;
+                
+                #{$ltr} & {
+                    border-color: transparent $white transparent transparent;
+                }
+                
+                #{$rtl} & {
+                    border-color: transparent transparent transparent $white;
+                }
+
                 z-index: 1;
                 opacity: 0;
                 transition: $main-transition;

@@ -767,13 +767,13 @@
     min-width: 132px;
   }
 
-  &.yellow-transparent {
+  &.red-transparent {
     background-color: transparent;
-    color: $black;
-    border-color: $sec;
+    color: $red;
+    border-color: $red;
 
     &:hover {
-      background-color: $sec;
+      background-color: $red;
       color: $white;
     }
   }
@@ -782,6 +782,10 @@
     background-color: $red;
     color: $white;
     border-color: $red;
+
+    &:hover {
+      color: $red;
+    }
   }
 
   &.white {
@@ -792,6 +796,17 @@
     &:hover {
       background-color: $white;
       color: $main;
+    }
+  }
+
+  &.light {
+    background-color: $white3;
+    color: $dark;
+    border-color: $white3;
+
+    &:hover {
+      background-color: $dark;
+      color: $white;
     }
   }
 
@@ -821,9 +836,9 @@
   }
 
   &.sm {
-    min-width: 80px;
-    font-size: 13px;
-    height: 34px;
+    min-width: 100px;
+    font-size: 14px;
+    height: 36px;
   }
 
   &.xs {
@@ -946,7 +961,7 @@
 
 /********************* Form *********************/
 
-.form-style {
+.form-section {
   border: 1px solid $border-color;
   padding: 30px;
   border-radius: 18px;
@@ -959,6 +974,29 @@
 
   @media screen and (max-width: $screen-xs) {
     padding: 30px 15px;
+  }
+
+  .main-btn {
+    @media screen and (max-width: $screen-xs) {
+      height: 42px;
+      font-size: 14px;
+    }
+  }
+}
+
+.form-style {
+  box-shadow: $main-shadow;
+  padding: 20px 30px;
+  border-radius: 15px;
+  width: 100%;
+  background-color: $white;
+
+  @media screen and (max-width: $screen-sm) {
+    padding: 20px;
+  }
+
+  @media screen and (max-width: $screen-xs) {
+    padding: 15px;
   }
 
   .main-btn {
@@ -1173,7 +1211,7 @@
 }
 
 .main-border {
-  border: 1px solid $main;
+  border: 1px solid $border-color;
 }
 
 .main-border-b {
@@ -1191,6 +1229,16 @@
   @media screen and (max-width: $screen-sm) {
     font-size: 14px;
     line-height: 1.7;
+  }
+}
+
+.main-price{
+  color: $sec;
+  font-size: 19px;
+  font-family: fontMed;
+
+  &.sm{
+    font-size: 17px;
   }
 }
 
@@ -1410,7 +1458,7 @@
 
 /********************* Inputs *********************/
 .input-g {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   display: block;
 }
 
@@ -1446,11 +1494,13 @@
     min-height: 48px;
     border-radius: 10px;
     outline: none;
-    color: $dark;
+    color: $black;
     transition: $main-transition;
     border: 1px solid $border-color;
     font-size: 14px;
     padding: 13px 16px;
+    font-family: fontMed;
+
 
     &.photo-input {
       display: flex;
@@ -2069,6 +2119,37 @@
   }
 }
 
+.profile-img-con{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  
+  @media screen and (max-width: $screen-md) {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .profile-img{
+    @include circle(56px);
+    object-fit: cover;
+  }
+
+  .profile-input{
+    position: relative;
+    .profile-label{
+      width: 76px;
+      height: 76px;
+      @include center;
+      border: 1px dashed $sec;
+      border-radius: 5px;
+
+      .ic{
+        max-height: 26px;
+      }
+    }
+  }
+}
+
 // upload-img
 .hidden-input {
   position: absolute;
@@ -2332,7 +2413,7 @@
   .modal-content {
     padding: 40px 0px 45px;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 20px;
 
     &.print {
       padding: 30px 0px 30px;
@@ -2363,14 +2444,34 @@
 
       .modal-title {
         font-size: 17px;
-        font-family: fontDemi;
         color: $black;
         margin-bottom: 0;
       }
+    }
+
+    .modal-body {
+      width: 100%;
+      padding: 0 20px;
+
+      &.center {
+        @include center;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      @media screen and (max-width: $screen-xs) {
+        padding: 0 5px;
+      }
+
+      .modal-title {
+        font-size: 16px;
+        color: $black2;
+        text-align: center;
+        margin-bottom: 18px;
+      }
 
       .modal-img {
-        max-width: 90px;
-        max-height: 110px;
+        max-width: 210px;
         margin: auto;
 
         &.lg {
@@ -2379,39 +2480,14 @@
         }
 
         @media screen and (max-width: $screen-sm) {
-          max-width: 65px;
-          max-height: 95px;
+          max-width: 160px;
         }
-      }
-    }
-
-    .modal-body {
-      width: 100%;
-      padding: 0 80px;
-
-      &.center {
-        @include center;
-        flex-direction: column;
-        gap: 28px;
-      }
-
-      @media screen and (max-width: $screen-xs) {
-        padding: 0 20px;
-      }
-
-      .modal-title {
-        font-size: 16px;
-        color: $black2;
-        text-align: center;
-        font-family: fontDemi;
-        margin-bottom: 18px;
       }
 
       .modal-text {
         font-size: 15px;
-        color: $black2;
+        color: $dark;
         text-align: center;
-        font-family: fontDemi;
         margin-bottom: 20px;
       }
 
@@ -2444,10 +2520,6 @@
           .input-modal {
             width: 100%;
             height: 100%;
-
-            &::placeholder {
-              font-family: fontReg;
-            }
           }
         }
       }
@@ -2472,11 +2544,6 @@
 
       * {
         margin: 0;
-      }
-
-      .main-btn {
-        margin: 0;
-        min-width: 190px;
       }
 
       .social-ic {
@@ -2589,18 +2656,18 @@
   &.left {
     // min-width: 180px;
     #{$ltr} & {
-      inset: 65px 0% auto auto;
+      inset: 60px 0% auto auto;
     }
     #{$rtl} & {
-      inset: 65px auto auto 0%;
+      inset: 60px auto auto 0%;
     }
 
     &.show {
       #{$ltr} & {
-        inset: 65px 0% auto auto !important;
+        inset: 60px 0% auto auto !important;
       }
       #{$rtl} & {
-        inset: 65px auto auto 0% !important;
+        inset: 60px auto auto 0% !important;
       }
     }
   }

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditiq</title>
+    <link rel="shortcut icon" href="./assets/imgs/logo.png" type="image/x-icon">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.rtl.min.css">
+    <!-- <link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.min.css"> -->
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="./assets/plugins/OwlCarousel2-2.3.4/dist_2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/plugins/OwlCarousel2-2.3.4/dist_2/assets/owl.theme.default.min.css">
+    <!-- Select 2 -->
+    <link rel="stylesheet" href="./assets/plugins/select2/select2.min.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="./assets/plugins/FancyBox/jquery.fancybox.min.css">
+    <!-- FlatPicker -->
+    <link rel="stylesheet" href="./assets/plugins/FlatPicker/flatpickr.css">
+    <!-- intlTelInput -->
+    <link rel="stylesheet" href="./assets/plugins/flag/css/intlTelInput.css">
+    <!-- Style Css -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+
+    <!-- start to loader -->
+    <div class="loader-container">
+        <span class="loader"></span>
+    </div>
+
+
+    <!-- Start Navbar -->
+    <nav class="navbar-m main-padding-right">
+        <div class="container ">
+            <div class="navbar-content">
+
+                <div class="d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-bars-staggered side-open sm-btn sm"></i>
+                    <h1 class="page-title">الباقات</h1>
+                </div>
+
+                <div class="left-sec">
+                    <div class="dropdown">
+                        <button type="button" class="profile-drop dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="./assets/imgs/profile.png" class="profile-img" alt="">
+                            <span class="profile-name">عبدالله محمد</span>
+                        </button>
+
+                        <ul class="dropdown-menu drop-lang left ">
+                            <a href="profile.html" class="lang-item">
+                                <img src="./assets/imgs/icons/profile_ic.png" alt="" class="ic">
+                                <div class="text">الملف الشخصي</div>
+                            </a>
+                            <a href="store-file.html" class="lang-item">
+                                <img src="./assets/imgs/icons/profile_ic2.png" alt="" class="ic">
+                                <div class="text">ملف المتجر</div>
+                            </a>
+                            <a href="#" class="lang-item red">
+                                <img src="./assets/imgs/icons/profile_ic3.png" alt="" class="ic">
+                                <div class="text">تسجيل خروج</div>
+                            </a>
+                        </ul>
+                    </div>
+
+                    <a href="visit-request.html" class="main-btn transparent sm">طلب زيارة</a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+
+
+    <!-- Start Sidebar -->
+    <div class="sidebar-m">
+
+        <a href="index.html" class="logo">
+            <img src="assets/imgs/logo.png" alt="store img" class="store-img">
+        </a>
+
+        <ul class="links">
+
+            <li class="nav-collapse">
+                <a href="#" class="coll-open link">
+                    <img class="side-icon" src="assets/imgs/icons/sidebar_1.png" alt="">
+                    <span class="text">الزيارات</span>
+                </a>
+                <ul class="collapse-content">
+                    <a href="index.html" class="coll link">
+                        زيارات لم تتم
+                    </a>
+
+                    <a href="scheduled-visits.html" class="coll link">
+                        زيارات مجدولة
+                    </a>
+
+                    <a href="visits-in-progress.html" class="coll link">
+                        زيارات قيد التنفيذ
+                    </a>
+
+                    <a href="visits-completed.html" class="coll link">
+                        زيارات اكتملت
+                    </a>
+                </ul>
+            </li>
+
+            <a href="branches.html" class="link">
+                <img class="side-icon" src="assets/imgs/icons/sidebar_2.png" alt="">
+                <span class="text">الفروع</span>
+            </a>
+
+            <a href="surveys.html" class="link">
+                <img class="side-icon" src="assets/imgs/icons/sidebar_3.png" alt="">
+                <span class="text">الاستبيانات</span>
+            </a>
+
+            <a href="packages.html" class="link">
+                <img class="side-icon" src="assets/imgs/icons/sidebar_4.png" alt="">
+                <span class="text">الباقات</span>
+            </a>
+
+        </ul>
+
+    </div>
+    <!-- End Sidebar -->
+
+
+
+    <!-- Start main Section -->
+    <div class="main-sec sec-padding main-padding-right">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xxl-6 col-xl-8 mx-auto">
+                    <div class="package-sec">
+                        <img src="./assets/imgs/Manage-money.png" alt="" class="package_img">
+                        <div class="left">
+                            <div class="top">
+                                <div class="info">
+                                    <div class="form-title">الباقة الذهبية</div>
+                                    <div class="main-price sm">150.00 ر.س</div>
+                                </div>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#payPackage" class="main-btn sec up">تجديد</a>
+                            </div>
+                            <div class="bottom">
+                                <div class="package-item ff-m">
+                                    عدد الزيارات: <span>10 زيارات</span>
+                                </div>
+                                <div class="package-item ff-m">
+                                    عدد الزيارات المتبقي: <span>7 زيارات</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="invoices">
+
+                <table class="invoices-table">
+                    <thead>
+                        <th>الرقم</th>
+                        <th>اسم الباقة</th>
+                        <th>عدد الزيارات</th>
+                        <th>قيمة الباقة</th>
+                        <th>حالة الاشتراك</th>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td class="ff-m">1</td>
+                            <td>الباقة الذهبية</td>
+                            <td class="ff-m">10 زيارات</td>
+                            <td class="ff-m">100.00 ر.س</td>
+                            <td class="buttons justify-content-center">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#payPackage" class="main-btn up sm">اشتراك</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="ff-m">1</td>
+                            <td>الباقة الذهبية</td>
+                            <td class="ff-m">10 زيارات</td>
+                            <td class="ff-m">100.00 ر.س</td>
+                            <td class="buttons justify-content-center">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#payPackage" class="main-btn up sm">اشتراك</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="ff-m">1</td>
+                            <td>الباقة الذهبية</td>
+                            <td class="ff-m">10 زيارات</td>
+                            <td class="ff-m">100.00 ر.س</td>
+                            <td class="buttons justify-content-center">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#payPackage" class="main-btn up sm">اشتراك</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="ff-m">1</td>
+                            <td>الباقة الذهبية</td>
+                            <td class="ff-m">10 زيارات</td>
+                            <td class="ff-m">100.00 ر.س</td>
+                            <td class="buttons justify-content-center">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#payPackage" class="main-btn up sm">اشتراك</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="ff-m">1</td>
+                            <td>الباقة الذهبية</td>
+                            <td class="ff-m">10 زيارات</td>
+                            <td class="ff-m">100.00 ر.س</td>
+                            <td class="buttons justify-content-center">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#payPackage" class="main-btn up sm">اشتراك</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="ff-m">1</td>
+                            <td>الباقة الذهبية</td>
+                            <td class="ff-m">10 زيارات</td>
+                            <td class="ff-m">100.00 ر.س</td>
+                            <td class="buttons justify-content-center">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#payPackage" class="main-btn up sm">اشتراك</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="ff-m">1</td>
+                            <td>الباقة الذهبية</td>
+                            <td class="ff-m">10 زيارات</td>
+                            <td class="ff-m">100.00 ر.س</td>
+                            <td class="buttons justify-content-center">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#payPackage" class="main-btn up sm">اشتراك</a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- End main Section -->
+
+
+    <div class="overlay-m"></div>
+
+
+    <!-- Start payPackage Modal -->
+    <div class="modal fade" id="payPackage" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <form action="" class="modal-content">
+
+            <div class="modal-body center">
+                <h5 class="form-title mb-0">دفع قيمة الباقة</h5>
+                <p class="main-price">150.00 ر.س</p>
+
+                <div class="row w-100 mt-4">
+
+                    <div class="col-12">
+                        <div class="input-g">
+                            <label for="" class="main-label">
+                                رقم البطاقة
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="number" placeholder="ادخل رقم البطاقة" class="input-me">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="input-g">
+                            <label for="" class="main-label">
+                                تاريخ الانتهاء
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="date" placeholder="تاريخ الانتهاء" class="input-me date">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="input-g">
+                            <label for="" class="main-label ff-m">
+                                cvv
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="number" placeholder="ادخل رقم cvv" class="input-me">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="input-g">
+                            <label for="" class="main-label">
+                                اسم صاحب البطاقة
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="text" placeholder="ادخل اسم صاحب البطاقة" class="input-me">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="submit" data-bs-dismiss="modal" class="main-btn sec up">تأكيد</button>
+              <button type="button" class="main-btn light" data-bs-dismiss="modal">رجوع</button>
+            </div>
+
+          </form>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap 5 -->
+    <script src="./assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Jquery -->
+    <script src="./assets/plugins/jquery/jquery-3.5.1.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="./assets/plugins/OwlCarousel2-2.3.4/dist_2/owl.carousel.min.js"></script>
+    <!-- Select 2 -->
+    <script src="./assets/plugins/select2/select2.js"></script>
+    <!-- fancybox -->
+    <script src="./assets/plugins/FancyBox/jquery.fancybox.min.js"></script>
+    <!-- FlatPicker -->
+    <script src="./assets/plugins/FlatPicker/flatpickr.js"></script>
+    <!-- Counter -->
+    <script src="./assets/plugins/countUp/waypoints.js"></script>
+    <script src="./assets/plugins/countUp/jquery.countup.min.js"></script>
+    <!-- intlTelInput -->
+    <script src="./assets/plugins/flag/js/intlTelInput.min.js"></script>
+    <!-- Flat Picker -->
+    <script>
+        flatpickr(".date", {
+            disableMobile: "true",
+            // mode: "multiple",
+            dateFormat: "Y-m-d"
+        });
+    </script>
+
+    <!-- Main Js -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
