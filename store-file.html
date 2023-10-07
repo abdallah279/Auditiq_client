@@ -43,7 +43,7 @@
 
                 <div class="d-flex align-items-center gap-2">
                     <i class="fa-solid fa-bars-staggered side-open sm-btn sm"></i>
-                    <h1 class="page-title">الفروع , إضافة فرع</h1>
+                    <h1 class="page-title">الملف الشخصي</h1>
                 </div>
 
                 <div class="left-sec">
@@ -139,75 +139,88 @@
     <div class="main-sec sec-padding main-padding-right">
         <div class="container">
 
-            <form action="branches.html" class="form-section">
-                <h5 class="form-title">إضافة فرع</h5>
+            <form action="" class="row">
+                <div class="col-xl-6 col-lg-8">
 
-                <div class="row gy-5 flex-column-reverse flex-lg-row">
-                    <div class="col-lg-6">
-                        <div class="input-g">
-                            <label for="" class="main-label">
-                                اسم الفرع
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-                                <input type="text" placeholder="ادخل اسم الفرع" class="input-me">
+                    <!-- Photo -->
+                    <div class="input-g">
+
+                        <div class="profile-img-con">
+
+                            <a href="./assets/imgs/store.png" class="fancybox-img" data-fancybox="gallery">
+                                <img src="./assets/imgs/store.png" class="profile-img" alt="">
+                            </a>
+
+                            <div class="profile-input">
+                                <input type="file" id="profileImg" accept="image/*"
+                                    class="hidden-input img-upload-input profile">
+                                <label for="profileImg" class="profile-label">
+                                    <img src="assets/imgs/icons/upload.png" alt="" class="ic">
+                                </label>
                             </div>
                         </div>
 
-                        <div class="input-g">
-                            <label for="" class="main-label">
-                                رقم الجوال
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-                                <input type="number" id="telephone" placeholder="أدخل رقم الجوال"
-                                    class="input-me phone-inp">
-                            </div>
-                        </div>
-
-                        <div class="input-g">
-                            <label for="" class="main-label">
-                                المدينة
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-                                <select name="" id="" class="select">
-                                    <option value="" selected disabled>اختر المدينة</option>
-                                    <option value="">ذكر</option>
-                                    <option value="">أنثى</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="input-g">
-                            <label for="" class="main-label">
-                                الحي
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-                                <select name="" id="" class="select">
-                                    <option value="" selected disabled>اختر الحي</option>
-                                    <option value="">العربية</option>
-                                    <option value="">الانجليزية</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="input-g">
-                            <label for="" class="main-label">
-                                اسم الشارع
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-                                <input type="text" placeholder="ادخل اسم الشارع" class="input-me">
-                            </div>
-                        </div>
-
-                        <button type="submit" class="main-btn sec up mt-4">إضافة</button>
                     </div>
-                    <div class="col-lg-6">
-                        <div id="map" class="main-border map"></div>
+
+                    <div class="input-g">
+                        <label for="" class="main-label">
+                            الاسم التجاري
+                            <span class="label-hint">*</span>
+                        </label>
+                        <div class="main-input">
+                            <input type="text" placeholder="ادخل الاسم التجاري" class="input-me">
+                        </div>
                     </div>
+
+                    <div class="input-g">
+                        <label for="" class="main-label">
+                            رقم جوال العمل
+                            <span class="label-hint">*</span>
+                        </label>
+                        <div class="main-input">
+                            <input type="number" id="telephone" placeholder="ادخل رقم جوال العمل"
+                                class="input-me phone-inp">
+                        </div>
+                    </div>
+
+                    <div class="input-g">
+                        <label for="" class="main-label">
+                            البريد الإلكتروني للمتجر
+                            <span class="label-hint">*</span>
+                        </label>
+                        <div class="main-input">
+                            <input type="email" placeholder="ادخل البريد الإلكتروني للمتجر" class="input-me">
+                        </div>
+                    </div>
+
+                    <div class="input-g">
+                        <label for="" class="main-label">
+                            النشاط
+                            <span class="label-hint">*</span>
+                        </label>
+                        <div class="main-input">
+                            <select name="" id="" class="select">
+                                <option value="" selected disabled>اختر النشاط</option>
+                                <option value="">ذكر</option>
+                                <option value="">أنثى</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-g">
+                        <label for="" class="main-label">
+                            وصف للمتجر
+                            <span class="label-hint">*</span>
+                        </label>
+                        <div class="main-input">
+                            <textarea class="input-me text-area sm" placeholder="ادخل وصف المتجر"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="buttons mt-4">
+                        <button type="submit" class="main-btn sec up">حفظ</button>
+                    </div>
+
                 </div>
             </form>
 
@@ -236,58 +249,6 @@
     <script src="./assets/plugins/countUp/jquery.countup.min.js"></script>
     <!-- intlTelInput -->
     <script src="./assets/plugins/flag/js/intlTelInput.min.js"></script>
-    <!-- Map -->
-    <script type="text/javascript" src="https://maps.google.com/maps/api/js?&libraries=places&key=AIzaSyBNLoYGrbnQI_GMqHt6m0PSN9yA7Zvq7gA"></script>
-
-
-    <!-- Initialize And Add The Map -->
-    <script>
-        function initMap() {
-            var location = { lat: 24.746189966314272, lng: 46.87979429238138 };
-
-            var map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 4,
-                center: location,
-            });
-
-            var marker = new google.maps.Marker({
-                position: location,
-                map: map,
-                draggable: true,
-                title: "اسحب العلامة",
-            });
-
-            let infowindow = [];
-            google.maps.event.addListener(marker, 'dragend', function (evt) {
-
-                const geocoder = new google.maps.Geocoder();
-
-                function geoLatLng(){
-                    geocoder.geocode({location: evt.latLng}).then((res) =>{
-                        let theCountry = res.results[0].formatted_address;
-
-                        let newInfoWindow = new google.maps.InfoWindow({
-                            content: `${theCountry}`
-                        });
-
-                        infowindow.push(newInfoWindow);
-                        for(let i =0; i< infowindow.length; i++){
-                            infowindow[i].close();
-                            infowindow[infowindow.length - 1].open(map, marker);
-                        }
-
-                        document.getElementById('inputMap').value = `${theCountry}`;
-                    });
-                }
-
-                geoLatLng();
-            });
-        }
-
-        initMap();
-
-    </script>
-
     <!-- intlTelInput -->
     <script>
         var input = document.querySelector("#telephone");
@@ -298,6 +259,33 @@
             // nationalMode:false,
             separateDialCode: true,
         }));
+    </script>
+
+
+    <!-- Upload Img -->
+    <script>
+        let loginInputs = document.querySelectorAll('.img-upload-input');
+
+        loginInputs.forEach((input) => {
+            let profileImg = input.closest('.profile-img-con').querySelector('.profile-img');
+            let fancyImg = input.closest('.profile-img-con').querySelector('.fancybox-img');
+            let imageSrc = profileImg.getAttribute('src');
+            input.onchange = function () {
+
+                let reader = new FileReader();
+                if (input.files[0]) {
+                    reader.readAsDataURL(input.files[0]);
+                } else {
+                    profileImg.setAttribute('src', imageSrc);
+                    fancyImg.setAttribute('href', imageSrc);
+                }
+
+                reader.onload = () => {
+                    profileImg.setAttribute('src', reader.result);
+                    fancyImg.setAttribute('href', reader.result);
+                }
+            }
+        });
     </script>
 
     <!-- Main Js -->

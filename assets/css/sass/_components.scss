@@ -821,6 +821,17 @@
     }
   }
 
+  &.m-transparent {
+    background-color: $white;
+    color: $main;
+    border-color: $main;
+
+    &:hover {
+      background-color: $main;
+      color: #fff;
+    }
+  }
+
   &.sec {
     background-color: $sec;
     border-color: $sec;
@@ -909,6 +920,42 @@
   }
 }
 
+.surveys-btn{
+  padding: 12px;
+  min-width: 200px;
+  color: $dark;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid $sec;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: $main-transition;
+  outline: none;
+
+  @media screen and (max-width: $screen-sm) {
+    gap: 12px;
+    min-width: 160px;
+    font-size: 14px;
+  }
+
+  .img{
+    @include circle(30px);
+    object-fit: cover;
+    
+    @media screen and (max-width: $screen-sm) {
+      @include circle(26px);
+    }
+  }
+
+  &.active{
+    background-color: rgba($color: $sec, $alpha: 20%);
+    color: $sec;
+    border-color: transparent;
+  }
+}
+
 .buttons {
   display: flex;
   align-items: center;
@@ -951,11 +998,25 @@
   color: $white;
   @include center;
   border-radius: 6px;
+  position: relative;
+  overflow: hidden;
 
   &.sm{
     font-size: 14px;
     height: 34px;
     width: 34px;
+  }
+
+  &.lg{
+    font-size: 14px;
+    height: 48px;
+    width: 48px;
+    border-radius: 10px;
+  }
+
+  &.sec{
+    background-color: $sec;
+    border: 1px solid $sec;
   }
 }
 
@@ -1176,6 +1237,10 @@
 
 .ff-d {
   font-family: fontDemi !important;
+}
+
+.ff-r {
+  font-family: fontLight !important;
 }
 
 .ff-b {
@@ -1922,7 +1987,7 @@
 
   input:checked + .check {
     background-color: transparent;
-    border-color: $black;
+    border-color: $main;
 
     &::after {
       content: "\f00c";
@@ -1933,7 +1998,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 13px;
-      color: $black;
+      color: $main;
     }
   }
 
@@ -1975,8 +2040,7 @@
 .radio-box {
   display: flex;
   align-items: center;
-  gap: 8px;
-  // margin-bottom: 8px;
+  gap: 14px;
 
   &:last-child {
     margin-bottom: 0;
@@ -1985,19 +2049,19 @@
   .input-radio {
     width: 18px;
     height: 18px;
-    accent-color: #7a8c7b;
+    accent-color: $main;
     // appearance: none;
     cursor: pointer;
     transition: $main-transition;
   }
 
   .label-radio {
-    font-size: 16px;
-    color: $black;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 3px;
+    font-size: 15px;
+    color: $dark;
+    // cursor: pointer;
+    // display: flex;
+    // align-items: center;
+    // gap: 3px;
     line-height: 1;
 
     .radio-img {
@@ -2142,6 +2206,15 @@
       @include center;
       border: 1px dashed $sec;
       border-radius: 5px;
+
+      &.text{
+        border: none;
+        background-color: $dark2;
+
+        .ic{
+          max-height: 36px;
+        }
+      }
 
       .ic{
         max-height: 26px;
@@ -2680,7 +2753,7 @@
     .lang-item {
       display: flex;
       align-items: center;
-      gap: 7px;
+      gap: 10px;
       padding: 12px 0;
       font-size: 14px;
       color: $dark;

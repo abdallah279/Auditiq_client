@@ -1040,6 +1040,15 @@ html[lang=ar] .iti--separate-dial-code .iti__flag-container {
   background-color: #0c69ad;
   color: #fff;
 }
+.main-btn.m-transparent {
+  background-color: #fff;
+  color: #3098de;
+  border-color: #3098de;
+}
+.main-btn.m-transparent:hover {
+  background-color: #3098de;
+  color: #fff;
+}
 .main-btn.sec {
   background-color: #0c69ad;
   border-color: #0c69ad;
@@ -1119,6 +1128,46 @@ html[lang=ar] .iti--separate-dial-code .iti__flag-container {
   font-size: 12px;
 }
 
+.surveys-btn {
+  padding: 12px;
+  min-width: 200px;
+  color: #505050;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #0c69ad;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  outline: none;
+}
+@media screen and (max-width: 576px) {
+  .surveys-btn {
+    gap: 12px;
+    min-width: 160px;
+    font-size: 14px;
+  }
+}
+.surveys-btn .img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+@media screen and (max-width: 576px) {
+  .surveys-btn .img {
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+  }
+}
+.surveys-btn.active {
+  background-color: rgba(12, 105, 173, 0.2);
+  color: #0c69ad;
+  border-color: transparent;
+}
+
 .buttons {
   display: flex;
   align-items: center;
@@ -1161,11 +1210,23 @@ html[lang=ar] .iti--separate-dial-code .iti__flag-container {
   justify-content: center;
   align-items: center;
   border-radius: 6px;
+  position: relative;
+  overflow: hidden;
 }
 .sm-btn.sm {
   font-size: 14px;
   height: 34px;
   width: 34px;
+}
+.sm-btn.lg {
+  font-size: 14px;
+  height: 48px;
+  width: 48px;
+  border-radius: 10px;
+}
+.sm-btn.sec {
+  background-color: #0c69ad;
+  border: 1px solid #0c69ad;
 }
 
 /********************* Form *********************/
@@ -1387,6 +1448,10 @@ html[lang=ar] .iti--separate-dial-code .iti__flag-container {
 
 .ff-d {
   font-family: fontDemi !important;
+}
+
+.ff-r {
+  font-family: fontLight !important;
 }
 
 .ff-b {
@@ -2174,7 +2239,7 @@ html[lang=ar] .select2-container--default .select2-selection--multiple .select2-
 }
 .check-box input:checked + .check {
   background-color: transparent;
-  border-color: #202020;
+  border-color: #3098de;
 }
 .check-box input:checked + .check::after {
   content: "\f00c";
@@ -2185,7 +2250,7 @@ html[lang=ar] .select2-container--default .select2-selection--multiple .select2-
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 13px;
-  color: #202020;
+  color: #3098de;
 }
 .check-box .check-text {
   font-size: 15px;
@@ -2216,7 +2281,7 @@ html[lang=ar] .select2-container--default .select2-selection--multiple .select2-
 .radio-box {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 14px;
 }
 .radio-box:last-child {
   margin-bottom: 0;
@@ -2224,17 +2289,13 @@ html[lang=ar] .select2-container--default .select2-selection--multiple .select2-
 .radio-box .input-radio {
   width: 18px;
   height: 18px;
-  accent-color: #7a8c7b;
+  accent-color: #3098de;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .radio-box .label-radio {
-  font-size: 16px;
-  color: #202020;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 3px;
+  font-size: 15px;
+  color: #505050;
   line-height: 1;
 }
 .radio-box .label-radio .radio-img {
@@ -2343,6 +2404,13 @@ html[lang=ar] .user-img .user-camera {
   align-items: center;
   border: 1px dashed #0c69ad;
   border-radius: 5px;
+}
+.profile-img-con .profile-input .profile-label.text {
+  border: none;
+  background-color: #E0E0E0;
+}
+.profile-img-con .profile-input .profile-label.text .ic {
+  max-height: 36px;
 }
 .profile-img-con .profile-input .profile-label .ic {
   max-height: 26px;
@@ -2855,7 +2923,7 @@ html[lang=ar] .dropdown-menu.left.show {
 .dropdown-menu.drop-lang .lang-item {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 10px;
   padding: 12px 0;
   font-size: 14px;
   color: #505050;
@@ -3154,7 +3222,7 @@ html[lang=ar] .pagination .page-item:last-child .page-link {
   left: 0;
   width: 100%;
   background-color: #0c69ad;
-  z-index: 10;
+  z-index: 30;
   transition: all 0.3s ease;
 }
 @media screen and (max-width: 768px) {
@@ -3450,6 +3518,10 @@ html[lang=ar] .main-padding-right {
   text-align: center;
   vertical-align: middle;
 }
+.invoices-table tbody tr td.text_td {
+  min-width: 300px;
+  white-space: initial;
+}
 @media screen and (max-width: 425px) {
   .invoices-table tbody tr td {
     font-size: 14px;
@@ -3561,5 +3633,68 @@ html[lang=ar] .main-padding-right {
 }
 
 /**************** End packages Section *************/
+/**************** Start add_sur_btns Section *************/
+.add_sur_btns .sur_btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 35px;
+  cursor: pointer;
+}
+.add_sur_btns .sur_btn:last-child {
+  margin-bottom: 0;
+}
+.add_sur_btns .sur_btn .ic {
+  max-width: 22px;
+  max-height: 24px;
+}
+.add_sur_btns .sur_btn .text {
+  font-size: 16px;
+  color: #505050;
+}
+
+/**************** End add_sur_btns Section *************/
+/**************** Start Surveys Section *************/
+.input_btns {
+  display: flex;
+  gap: 10px;
+}
+.input_btns .main-input {
+  flex: 1;
+}
+.input_btns .main-btn, .input_btns .select2-selection {
+  height: 40px;
+  min-height: 40px !important;
+  border-radius: 6px !important;
+  font-size: 14px;
+}
+
+.delete_radio, .edit_radio {
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.delete_radio {
+  color: #d00000;
+}
+
+.edit_radio {
+  color: #505050;
+}
+
+.upload_img {
+  max-height: 40px;
+  display: block;
+}
+
+.no_data {
+  max-width: 340px;
+  display: block;
+  margin: 0 auto;
+}
+
+/**************** End Surveys Section *************/
 
 /*# sourceMappingURL=main.css.map */

@@ -43,7 +43,7 @@
 
                 <div class="d-flex align-items-center gap-2">
                     <i class="fa-solid fa-bars-staggered side-open sm-btn sm"></i>
-                    <h1 class="page-title">الفروع</h1>
+                    <h1 class="page-title">الاستبيانات</h1>
                 </div>
 
                 <div class="left-sec">
@@ -139,21 +139,23 @@
     <div class="main-sec sec-padding main-padding-right">
         <div class="container">
 
-            <div class="form-style sec-padding px-4 d-flex-between flex-column gap-4 mb-4">
-                <img src="./assets/imgs/branches_img.png" alt="" class="branche_img">
-                <p class="fs-16 c-black">قم بإضافة فروعك أولاً</p>
-                <a href="add-branche.html" class="main-btn sec up">
+            <div class="form-style mb-4 d-flex-between p-3">
+                <p class="main-text">قم بإضافة استبيان جديد</p>
+                <a href="add-surveys.html" class="main-btn sec up">
                     <i class="fa-solid fa-plus"></i>
-                    أضف فرع
+                    أضف استبيان
                 </a>
             </div>
 
-            <div class="form-style mb-4 d-flex-between p-3">
-                <p class="main-text">قم بإضافة فرع جديد</p>
-                <a href="add-branche.html" class="main-btn sec up">
-                    <i class="fa-solid fa-plus"></i>
-                    أضف فرع
-                </a>
+            <div class="buttons mb-4 justify-content-center">
+                <button class="surveys-btn active">
+                    <img src="./assets/imgs/file.png" alt="" class="img">
+                    استبيانات قيد التنفيذ
+                </button>
+                <button class="surveys-btn">
+                    <img src="./assets/imgs/file2.png" alt="" class="img">
+                    استبيانات اكتملت
+                </button>
             </div>
 
             <div class="invoices">
@@ -161,116 +163,132 @@
                 <table class="invoices-table">
                     <thead>
                         <th>الرقم</th>
-                        <th>اسم الفرع</th>
-                        <th>رقم الجوال</th>
-                        <th>المدينة</th>
-                        <th>الحي</th>
-                        <th>الشارع</th>
+                        <th>اسم الاستبيان</th>
+                        <th>القسم</th>
+                        <th>تاريخ الاضافة</th>
+                        <th></th>
+                        <th></th>
                         <th></th>
                     </thead>
                     <tbody>
 
                         <tr>
                             <td class="ff-m">1</td>
-                            <td>الفرع الرئيسي</td>
-                            <td class="ff-m" dir="ltr">+966 122333444</td>
-                            <td>الرياض</td>
-                            <td>الياسمين</td>
-                            <td>الملك عبدالعزيز</td>
-                            <td class="buttons justify-content-center">
-                                <a href="edit-branche.html" class="main-btn sm sec up">تعديل</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteBranche" class="main-btn sm red-transparent">حذف</a>
+                            <td>استطلاع رأي</td>
+                            <td>منتجات</td>
+                            <td class="ff-m">25/9/2022</td>
+                            <td class="buttons justify-content-end">
+                                <a href="survey-detailes.html" class="main-btn sm m-transparent">عرض</a>
+                                <a href="edit-surveys.html" class="main-btn sm sec up">تعديل</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteSurveys" class="main-btn sm red-transparent">حذف</a>
                             </td>
                         </tr>
 
                         <tr>
                             <td class="ff-m">1</td>
-                            <td>الفرع الرئيسي</td>
-                            <td class="ff-m" dir="ltr">+966 122333444</td>
-                            <td>الرياض</td>
-                            <td>الياسمين</td>
-                            <td>الملك عبدالعزيز</td>
-                            <td class="buttons justify-content-center">
-                                <a href="edit-branche.html" class="main-btn sm sec up">تعديل</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteBranche" class="main-btn sm red-transparent">حذف</a>
+                            <td>استطلاع رأي</td>
+                            <td>منتجات</td>
+                            <td class="ff-m">25/9/2022</td>
+                            <td class="buttons justify-content-end">
+                                <a href="survey-detailes.html" class="main-btn sm m-transparent">عرض</a>
+                                <a href="edit-surveys.html" class="main-btn sm sec up">تعديل</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteSurveys" class="main-btn sm red-transparent">حذف</a>
                             </td>
                         </tr>
 
                         <tr>
                             <td class="ff-m">1</td>
-                            <td>الفرع الرئيسي</td>
-                            <td class="ff-m" dir="ltr">+966 122333444</td>
-                            <td>الرياض</td>
-                            <td>الياسمين</td>
-                            <td>الملك عبدالعزيز</td>
-                            <td class="buttons justify-content-center">
-                                <a href="edit-branche.html" class="main-btn sm sec up">تعديل</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteBranche" class="main-btn sm red-transparent">حذف</a>
+                            <td>استطلاع رأي</td>
+                            <td>منتجات</td>
+                            <td class="ff-m">25/9/2022</td>
+                            <td class="buttons justify-content-end">
+                                <a href="survey-detailes.html" class="main-btn sm m-transparent">عرض</a>
+                                <a href="edit-surveys.html" class="main-btn sm sec up">تعديل</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteSurveys" class="main-btn sm red-transparent">حذف</a>
                             </td>
                         </tr>
 
                         <tr>
                             <td class="ff-m">1</td>
-                            <td>الفرع الرئيسي</td>
-                            <td class="ff-m" dir="ltr">+966 122333444</td>
-                            <td>الرياض</td>
-                            <td>الياسمين</td>
-                            <td>الملك عبدالعزيز</td>
-                            <td class="buttons justify-content-center">
-                                <a href="edit-branche.html" class="main-btn sm sec up">تعديل</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteBranche" class="main-btn sm red-transparent">حذف</a>
+                            <td>استطلاع رأي</td>
+                            <td>منتجات</td>
+                            <td class="ff-m">25/9/2022</td>
+                            <td class="buttons justify-content-end">
+                                <a href="survey-detailes.html" class="main-btn sm m-transparent">عرض</a>
+                                <a href="edit-surveys.html" class="main-btn sm sec up">تعديل</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteSurveys" class="main-btn sm red-transparent">حذف</a>
                             </td>
                         </tr>
 
                         <tr>
                             <td class="ff-m">1</td>
-                            <td>الفرع الرئيسي</td>
-                            <td class="ff-m" dir="ltr">+966 122333444</td>
-                            <td>الرياض</td>
-                            <td>الياسمين</td>
-                            <td>الملك عبدالعزيز</td>
-                            <td class="buttons justify-content-center">
-                                <a href="edit-branche.html" class="main-btn sm sec up">تعديل</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteBranche" class="main-btn sm red-transparent">حذف</a>
+                            <td>استطلاع رأي</td>
+                            <td>منتجات</td>
+                            <td class="ff-m">25/9/2022</td>
+                            <td class="buttons justify-content-end">
+                                <a href="survey-detailes.html" class="main-btn sm m-transparent">عرض</a>
+                                <a href="edit-surveys.html" class="main-btn sm sec up">تعديل</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteSurveys" class="main-btn sm red-transparent">حذف</a>
                             </td>
                         </tr>
 
                         <tr>
                             <td class="ff-m">1</td>
-                            <td>الفرع الرئيسي</td>
-                            <td class="ff-m" dir="ltr">+966 122333444</td>
-                            <td>الرياض</td>
-                            <td>الياسمين</td>
-                            <td>الملك عبدالعزيز</td>
-                            <td class="buttons justify-content-center">
-                                <a href="edit-branche.html" class="main-btn sm sec up">تعديل</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteBranche" class="main-btn sm red-transparent">حذف</a>
+                            <td>استطلاع رأي</td>
+                            <td>منتجات</td>
+                            <td class="ff-m">25/9/2022</td>
+                            <td class="buttons justify-content-end">
+                                <a href="survey-detailes.html" class="main-btn sm m-transparent">عرض</a>
+                                <a href="edit-surveys.html" class="main-btn sm sec up">تعديل</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteSurveys" class="main-btn sm red-transparent">حذف</a>
                             </td>
                         </tr>
 
                         <tr>
                             <td class="ff-m">1</td>
-                            <td>الفرع الرئيسي</td>
-                            <td class="ff-m" dir="ltr">+966 122333444</td>
-                            <td>الرياض</td>
-                            <td>الياسمين</td>
-                            <td>الملك عبدالعزيز</td>
-                            <td class="buttons justify-content-center">
-                                <a href="edit-branche.html" class="main-btn sm sec up">تعديل</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteBranche" class="main-btn sm red-transparent">حذف</a>
+                            <td>استطلاع رأي</td>
+                            <td>منتجات</td>
+                            <td class="ff-m">25/9/2022</td>
+                            <td class="buttons justify-content-end">
+                                <a href="survey-detailes.html" class="main-btn sm m-transparent">عرض</a>
+                                <a href="edit-surveys.html" class="main-btn sm sec up">تعديل</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteSurveys" class="main-btn sm red-transparent">حذف</a>
                             </td>
                         </tr>
 
                         <tr>
                             <td class="ff-m">1</td>
-                            <td>الفرع الرئيسي</td>
-                            <td class="ff-m" dir="ltr">+966 122333444</td>
-                            <td>الرياض</td>
-                            <td>الياسمين</td>
-                            <td>الملك عبدالعزيز</td>
-                            <td class="buttons justify-content-center">
-                                <a href="edit-branche.html" class="main-btn sm sec up">تعديل</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteBranche" class="main-btn sm red-transparent">حذف</a>
+                            <td>استطلاع رأي</td>
+                            <td>منتجات</td>
+                            <td class="ff-m">25/9/2022</td>
+                            <td class="buttons justify-content-end">
+                                <a href="survey-detailes.html" class="main-btn sm m-transparent">عرض</a>
+                                <a href="edit-surveys.html" class="main-btn sm sec up">تعديل</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteSurveys" class="main-btn sm red-transparent">حذف</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="ff-m">1</td>
+                            <td>استطلاع رأي</td>
+                            <td>منتجات</td>
+                            <td class="ff-m">25/9/2022</td>
+                            <td class="buttons justify-content-end">
+                                <a href="survey-detailes.html" class="main-btn sm m-transparent">عرض</a>
+                                <a href="edit-surveys.html" class="main-btn sm sec up">تعديل</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteSurveys" class="main-btn sm red-transparent">حذف</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="ff-m">1</td>
+                            <td>استطلاع رأي</td>
+                            <td>منتجات</td>
+                            <td class="ff-m">25/9/2022</td>
+                            <td class="buttons justify-content-end">
+                                <a href="survey-detailes.html" class="main-btn sm m-transparent">عرض</a>
+                                <a href="edit-surveys.html" class="main-btn sm sec up">تعديل</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteSurveys" class="main-btn sm red-transparent">حذف</a>
                             </td>
                         </tr>
 
@@ -287,18 +305,18 @@
     <div class="overlay-m"></div>
 
 
-    <!-- Start Delete Branche Modal -->
-    <div class="modal fade" id="deleteBranche" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <!-- Start Delete Surveys Modal -->
+    <div class="modal fade" id="deleteSurveys" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
 
             <div class="modal-body center">
                 <img src="assets/imgs/delete_branche.png" class="modal-img" alt="warning"></img>
-                <p class="modal-text">هل حقاً تريد حذف الفرع؟</p>
+                <p class="modal-text">هل حقاً تريد حذف الاستبيان؟</p>
             </div>
 
             <div class="modal-footer">
-              <button type="button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#deleteBrancheDone" class="main-btn red up">نعم ,حذف</button>
+              <button type="button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#deleteSurveysDone" class="main-btn red up">نعم ,حذف</button>
               <button class="main-btn up sec" data-bs-dismiss="modal">لا ,رجوع</button>
             </div>
 
@@ -307,18 +325,18 @@
     </div>
 
 
-    <!-- Start Delete Branche Done Modal -->
-    <div class="modal fade" id="deleteBrancheDone" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <!-- Start Delete Survey Done Modal -->
+    <div class="modal fade" id="deleteSurveysDone" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
 
             <div class="modal-body center">
                 <img src="assets/imgs/Flat.png" class="modal-img" alt="warning"></img>
-                <p class="modal-text">تم حذف الفرع بنجاح</p>
+                <p class="modal-text">تم حذف الاستبيان بنجاح</p>
             </div>
 
             <div class="modal-footer">
-              <button type="button" class="main-btn up sec" data-bs-dismiss="modal">العودة للفروع</button>
+              <button type="button" class="main-btn up sec" data-bs-dismiss="modal">العودة للاستبيانات</button>
             </div>
 
           </div>
@@ -343,6 +361,13 @@
     <script src="./assets/plugins/countUp/jquery.countup.min.js"></script>
     <!-- intlTelInput -->
     <script src="./assets/plugins/flag/js/intlTelInput.min.js"></script>
+
+    <script>
+        $(".surveys-btn").on("click", function () {
+            $(".surveys-btn").removeClass("active");
+            $(this).addClass("active");
+        });
+    </script>
 
     <!-- Main Js -->
     <script src="assets/js/main.js"></script>

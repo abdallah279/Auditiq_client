@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   background-color: $sec;
-  z-index: 10;
+  z-index: 30;
   transition: $main-transition;
 
   @media screen and (max-width: $screen-md) {
