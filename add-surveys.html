@@ -236,8 +236,9 @@
 
                             <button type="button" class="main-btn sec up" data-bs-toggle="modal"
                                 data-bs-target="#AddPageModal">إضافة صفحة</button>
-                            <button type="button" class="main-btn red-transparent" id="deletePageBtn">حذف
-                                الصفحة</button>
+                            <button type="button" class="main-btn red-transparent" id="deletePageBtn">
+                                حذف الصفحة
+                            </button>
                         </div>
 
                         <div id="allPageContainer">
@@ -605,6 +606,7 @@
                 starWidth: "30px",
                 normalFill: "#E3E3E3",
                 ratedFill: "#FFC107",
+                readOnly: true,
                 rtl: isRtlRate ? true : false,
                 onSet: function (rating, rateYoInstance) {
                     console.log(rating)
@@ -702,9 +704,9 @@
             let mainTextInput = $('#mainTextInput').val();
             let mainTextDiv = `
                 <div class="form-section d-flex-between px-4 mb-4 itemDelete">
-                    <h1 class="fs-19">${mainTextInput}</h1>
+                    <input value='${mainTextInput}' class='appendedInput lg' />
                     <div class="buttons flex-shrink-0">
-                        <button type="button" class="edit_radio" data-bs-toggle="modal" data-bs-target="#mainText">
+                        <button type="button" class="edit_radio">
                             <i class="fa-regular fa-pen-to-square"></i>
                         </button>
                         <button type="button" class="delete_radio">
@@ -719,6 +721,7 @@
                 mainTextInput ? $(`#page0 .mainTextCon`).append(mainTextDiv) : false
             }
             $('#mainTextInput').val('');
+            editTitle();
             deleteDiv();
         })
     </script>
@@ -729,9 +732,9 @@
             let simpleSubtextInput = $('#simpleSubtextInput').val();
             let simpleSubtextDiv = `
                 <div class="form-section d-flex-between px-4 mb-4 itemDelete">
-                    <p>${simpleSubtextInput}</p>
+                    <input value='${simpleSubtextInput}' class='appendedInput' />
                     <div class="buttons flex-shrink-0">
-                        <button type="button" class="edit_radio" data-bs-toggle="modal" data-bs-target="#simpleSubtext">
+                        <button type="button" class="edit_radio">
                             <i class="fa-regular fa-pen-to-square"></i>
                         </button>
                         <button type="button" class="delete_radio">
@@ -746,6 +749,7 @@
                 simpleSubtextInput ? $(`#page0 .simpleSubtextCon`).append(simpleSubtextDiv) : false
             }
             $('#simpleSubtextInput').val('');
+            editTitle();
             deleteDiv();
         })
     </script>
@@ -757,9 +761,9 @@
             let multiLineDiv = `
                 <div class="form-section px-4 mb-4 itemDelete">
                     <div class="d-flex-between">
-                        <p>${multiLineInput}</p>
+                        <input value='${multiLineInput}' class='appendedInput' />
                         <div class="buttons flex-shrink-0">
-                            <button type="button" class="edit_radio" data-bs-toggle="modal" data-bs-target="#multiLineSubtext">
+                            <button type="button" class="edit_radio">
                                 <i class="fa-regular fa-pen-to-square"></i>
                             </button>
                             <button type="button" class="delete_radio">
@@ -768,7 +772,7 @@
                         </div>
                     </div>
                     <div class="main-input mt-3">
-                        <textarea class="input-me text-area sm"></textarea>
+                        <textarea class="input-me text-area sm" disabled></textarea>
                     </div>
                 </div>
             `;
@@ -779,6 +783,7 @@
             }
             $('#multiLineInput').val('');
             deleteDiv();
+            editTitle();
         })
     </script>
 
@@ -790,7 +795,7 @@
             let radioItem = `
                 <div class="radio_item d-flex-between mb-3 itemDelete">
                     <div class="radio-box">
-                        <input type="radio" class="input-radio" name="radio1">
+                        <input type="radio" class="input-radio" name="radio1" >
                         <label for="" class="label-radio">${addRadioInput}</label>
                     </div>
                     <button type="button" class="delete_radio">
@@ -820,9 +825,9 @@
             let chooseOneDiv = `
                 <div class="form-section px-4 mb-4 itemDelete">
                     <div class="d-flex-between">
-                        <p>${chooseOneInput}</p>
+                        <input value='${chooseOneInput}' class='appendedInput' />
                         <div class="buttons flex-shrink-0">
-                            <button type="button" class="edit_radio" data-bs-toggle="modal" data-bs-target="#chooseOne">
+                            <button type="button" class="edit_radio">
                                 <i class="fa-regular fa-pen-to-square"></i>
                             </button>
                             <button type="button" class="delete_radio">
@@ -844,7 +849,7 @@
                 if (item) {
                     let radioI = `
                         <div class="radio-box mb-4">
-                            <input type="radio" class="input-radio" name="radio${count}">
+                            <input type="radio" class="input-radio" disabled name="radio${count}">
                             <label for="" class="label-radio ff-r">${item}</label>
                         </div>
                     `
@@ -855,6 +860,7 @@
             radioArr = [];
             count++;
             deleteDiv();
+            editTitle();
         })
     </script>
 
@@ -897,9 +903,9 @@
             let MultipleChoiceDiv = `
                 <div class="form-section px-4 mb-4 itemDelete">
                     <div class="d-flex-between">
-                        <p>${MultipleChoiceInput}</p>
+                        <input value='${MultipleChoiceInput}' class='appendedInput' />
                         <div class="buttons flex-shrink-0">
-                            <button type="button" class="edit_radio" data-bs-toggle="modal" data-bs-target="#MultipleChoice">
+                            <button type="button" class="edit_radio">
                                 <i class="fa-regular fa-pen-to-square"></i>
                             </button>
                             <button type="button" class="delete_radio">
@@ -921,7 +927,7 @@
                 if (checkBoxArr[i]) {
                     let checkBoxI = `
                         <div class="check-box mb-4">
-                            <input type="checkbox" name="MultipleChoice${countCheck}" id="MultipleChoice${countCheck + i / 2}">
+                            <input type="checkbox" name="MultipleChoice${countCheck}" disabled id="MultipleChoice${countCheck + i / 2}">
                             <label class="check" for="MultipleChoice${countCheck + i / 2}"></label>
                             <label class="check-text ff-r" for="MultipleChoice${countCheck + i / 2}">${checkBoxArr[i]}</label>
                         </div>
@@ -933,6 +939,7 @@
             checkBoxArr = [];
             countCheck++;
             deleteDiv();
+            editTitle();
         })
     </script>
 
@@ -943,9 +950,9 @@
             let StarRatingDiv = `
                 <div class="form-section px-4 mb-4 itemDelete">
                     <div class="d-flex-between">
-                        <p>${StarRatingInput}</p>
+                        <input value='${StarRatingInput}' class='appendedInput' />
                         <div class="buttons flex-shrink-0">
-                            <button type="button" class="edit_radio" data-bs-toggle="modal" data-bs-target="#StarRating">
+                            <button type="button" class="edit_radio">
                                 <i class="fa-regular fa-pen-to-square"></i>
                             </button>
                             <button type="button" class="delete_radio">
@@ -965,6 +972,7 @@
             }
             $('#StarRatingInput').val('');
             deleteDiv();
+            editTitle();
             rating();
         })
     </script>
@@ -976,9 +984,9 @@
             let AddImageDiv = `
                 <div class="form-section px-4 mb-4 itemDelete">
                     <div class="d-flex-between">
-                        <p>${AddImageInput}</p>
+                        <input value='${AddImageInput}' class='appendedInput' />
                         <div class="buttons flex-shrink-0">
-                            <button type="button" class="edit_radio" data-bs-toggle="modal" data-bs-target="#AddImage">
+                            <button type="button" class="edit_radio">
                                 <i class="fa-regular fa-pen-to-square"></i>
                             </button>
                             <button type="button" class="delete_radio">
@@ -989,7 +997,7 @@
 
                     <div class="profile-img-con mt-4">
                         <div class="profile-input">
-                            <input type="file" id="profileImg" accept="image/*" class="hidden-input img-upload-input profile">
+                            <input type="file" id="profileImg" disabled accept="image/*" class="hidden-input img-upload-input profile">
                             <label for="profileImg" class="profile-label text">
                                 <img src="assets/imgs/icons/text_ic7.png" alt="" class="ic">
                             </label>
@@ -1006,6 +1014,7 @@
             }
             $('#AddImageInput').val('');
             deleteDiv();
+            editTitle();
             uploadImg();
         })
     </script>
@@ -1017,9 +1026,9 @@
             let ImageTextDiv = `
                 <div class="form-section px-4 mb-4 itemDelete">
                     <div class="d-flex-between">
-                        <p>${ImageTextInput}</p>
+                        <input value='${ImageTextInput}' class='appendedInput' />
                         <div class="buttons flex-shrink-0">
-                            <button type="button" class="edit_radio" data-bs-toggle="modal" data-bs-target="#ImageText">
+                            <button type="button" class="edit_radio">
                                 <i class="fa-regular fa-pen-to-square"></i>
                             </button>
                             <button type="button" class="delete_radio">
@@ -1030,7 +1039,7 @@
 
                     <div class="profile-img-con mt-4">
                         <div class="profile-input">
-                            <input type="file" id="profileImg" accept="image/*" class="hidden-input img-upload-input profile">
+                            <input type="file" id="profileImg" disabled accept="image/*" class="hidden-input img-upload-input profile">
                             <label for="profileImg" class="profile-label text">
                                 <img src="assets/imgs/icons/text_ic7.png" alt="" class="ic">
                             </label>
@@ -1038,7 +1047,7 @@
                     </div>
 
                     <div class="main-input mt-4">
-                        <textarea class="input-me text-area sm"></textarea>
+                        <textarea class="input-me text-area sm" disabled></textarea>
                     </div>
                 </div>
 
@@ -1051,8 +1060,20 @@
             }
             $('#ImageTextInput').val('');
             deleteDiv();
+            editTitle();
             uploadImg();
         })
+    </script>
+
+    <!-- edit Btn -->
+    <script>
+        function editTitle() {
+            $('.edit_radio').on('click', function () {
+                let input = $(this).closest('.itemDelete').find('.appendedInput');
+                input.focus();
+            });
+
+        }
     </script>
 
     <!-- deleteDiv -->

@@ -140,7 +140,7 @@
         <div class="container">
 
             <form action="" class="row">
-                <div class="col-xl-6 col-lg-8">
+                <div class="col-xl-6 col-lg-10">
 
                     <!-- Photo -->
                     <div class="input-g">
@@ -217,6 +217,32 @@
                         </div>
                     </div>
 
+                    <div class="input-g">
+                        <label for="" class="main-label">
+                            روابط التواصل الاجتماعي
+                            <span class="label-hint">*</span>
+                        </label>
+                        <div class="input-g d-flex gap-3 social-con">
+                            <div class="main-input w-100">
+                                <select name="" id="socialSelect" class="select" >
+                                    <option value="" selected disabled>اختر نوع الرابط</option>
+                                    <option value="" data-icon="./assets/imgs/icons/Facebook-icon.png">فيسبوك</option>
+                                    <option value="" data-icon="./assets/imgs/icons/snapchat-icon.png">سناب شات</option>
+                                    <option value="" data-icon="./assets/imgs/icons/whatsapp-icon.png">واتساب</option>
+                                    <option value="" data-icon="./assets/imgs/icons/instagram-icon.png">انستجرام</option>
+                                </select>
+                            </div>
+                            <div class="main-input w-100">
+                                <input type="text" id="socialInput" placeholder="ادخل نص الاختيار" class="input-me" id="addRadioInput">
+                            </div>
+                            <button type="button" class="sm-btn lg sec flex-shrink-0 up" id="addSocialBtn">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="allSocialCon"></div>
+
                     <div class="buttons mt-4">
                         <button type="submit" class="main-btn sec up">حفظ</button>
                     </div>
@@ -286,6 +312,31 @@
                 }
             }
         });
+    </script>
+
+    <!-- add Social Btn -->
+    <script>
+        $('#addSocialBtn').on('click', function(){
+            let socialInput = $('#socialInput').val();
+            let socialSelectIcon = $('#socialSelect').find('option:selected').attr('data-icon');
+            const socialItem = `
+                <div class="social_item d-flex-between mb-3 itemDelete">
+                    <div class='d-flex align-items-center gap-3'>
+                        <img src='${socialSelectIcon}' class='social_ic' />
+                        <p>${socialInput}</p>
+                    </div>
+                    <button type="button" class="delete_social delete_radio">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
+            `
+            $('#allSocialCon').append(socialItem);
+            $('#socialInput').val('');
+            $('.delete_radio').on('click', function () {
+                $(this).closest('.itemDelete').remove();
+            });
+        })
+
     </script>
 
     <!-- Main Js -->

@@ -3684,6 +3684,45 @@ html[lang=ar] .main-padding-right {
   }
 }
 
+.appendedInput {
+  font-size: 16px;
+  color: #505050;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  width: calc(100% - 80px);
+}
+@media screen and (max-width: 425px) {
+  .appendedInput {
+    font-size: 15px !important;
+    width: calc(100% - 60px);
+  }
+}
+.appendedInput.lg {
+  font-size: 18px;
+  font-family: fontMed;
+  color: #202020;
+}
+.appendedInput:focus {
+  padding: 10px 15px;
+  border: 1px solid #0c69ad;
+  border-radius: 5px;
+  pointer-events: auto;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 576px) {
+  .social-con {
+    flex-direction: column;
+  }
+}
+
+.social_item .social_ic {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
 /**************** End Surveys Section *************/
 
 /*# sourceMappingURL=main.css.map */
