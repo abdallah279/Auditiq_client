@@ -234,8 +234,10 @@
                                 </select>
                             </div>
 
-                            <button type="button" class="main-btn sec up" data-bs-toggle="modal" data-bs-target="#AddPageModal">إضافة صفحة</button>
-                            <button type="button" class="main-btn red-transparent" id="deletePageBtn">حذف الصفحة</button>
+                            <button type="button" class="main-btn sec up" data-bs-toggle="modal"
+                                data-bs-target="#AddPageModal">إضافة صفحة</button>
+                            <button type="button" class="main-btn red-transparent" id="deletePageBtn">حذف
+                                الصفحة</button>
                         </div>
 
                         <div id="allPageContainer">
@@ -276,7 +278,8 @@
     <!-- ******************* Modals ******************** -->
 
     <!-- Start AddPageModal Modal -->
-    <div class="modal fade" id="AddPageModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal fade" id="AddPageModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <form action="" class="modal-content">
 
@@ -678,16 +681,16 @@
             `;
             $(`#pageSelect`).append(AddPageName);
             $(`#allPageContainer`).append(pageContent);
-            $(`#pageSelect option`).each(function(){
+            $(`#pageSelect option`).each(function () {
                 let i = $(this).index();
                 $(this).attr('data-page', `page${i}`);
                 $('.pageContainer')[i].id = `page${i}`;
             });
             $('#AddPageInput').val('');
             $('.pageContainer').hide();
-            if(pageNumItem){
+            if (pageNumItem) {
                 $(`#${pageNumItem}`).show();
-            } else{
+            } else {
                 $(`#page0`).show();
             }
         })
@@ -710,9 +713,9 @@
                     </div>
                 </div>
             `;
-            if(pageNumItem){
+            if (pageNumItem) {
                 mainTextInput ? $(`#${pageNumItem} .mainTextCon`).append(mainTextDiv) : false
-            } else{
+            } else {
                 mainTextInput ? $(`#page0 .mainTextCon`).append(mainTextDiv) : false
             }
             $('#mainTextInput').val('');
@@ -737,9 +740,9 @@
                     </div>
                 </div>
             `;
-            if(pageNumItem){
+            if (pageNumItem) {
                 simpleSubtextInput ? $(`#${pageNumItem} .simpleSubtextCon`).append(simpleSubtextDiv) : false
-            } else{
+            } else {
                 simpleSubtextInput ? $(`#page0 .simpleSubtextCon`).append(simpleSubtextDiv) : false
             }
             $('#simpleSubtextInput').val('');
@@ -769,9 +772,9 @@
                     </div>
                 </div>
             `;
-            if(pageNumItem){
+            if (pageNumItem) {
                 multiLineInput ? $(`#${pageNumItem} .multiLineCon`).append(multiLineDiv) : false
-            } else{
+            } else {
                 multiLineInput ? $(`#page0 .multiLineCon`).append(multiLineDiv) : false
             }
             $('#multiLineInput').val('');
@@ -831,9 +834,9 @@
                     <div class="radio_items mt-4 radio_itemsAppended${count}"></div>
                 </div>
             `;
-            if(pageNumItem){
+            if (pageNumItem) {
                 chooseOneInput ? $(`#${pageNumItem} .chooseOneCon`).append(chooseOneDiv) : false
-            } else{
+            } else {
                 chooseOneInput ? $(`#page0 .chooseOneCon`).append(chooseOneDiv) : false
             }
             $('#chooseOneInput').val('');
@@ -908,9 +911,9 @@
                     <div class="radio_items mt-4 checkboxAppended${countCheck}"></div>
                 </div>
             `;
-            if(pageNumItem){
+            if (pageNumItem) {
                 MultipleChoiceInput ? $(`#${pageNumItem} .MultipleChoiceCon`).append(MultipleChoiceDiv) : false
-            } else{
+            } else {
                 MultipleChoiceInput ? $(`#page0 .MultipleChoiceCon`).append(MultipleChoiceDiv) : false
             }
             $('#MultipleChoiceInput').val('');
@@ -955,9 +958,9 @@
                     <input type="hidden" class="rate-value">
                 </div>
             `;
-            if(pageNumItem){
+            if (pageNumItem) {
                 StarRatingInput ? $(`#${pageNumItem} .StarRatingCon`).append(StarRatingDiv) : false
-            } else{
+            } else {
                 StarRatingInput ? $(`#page0 .StarRatingCon`).append(StarRatingDiv) : false
             }
             $('#StarRatingInput').val('');
@@ -996,9 +999,9 @@
 
                 
             `;
-            if(pageNumItem){
+            if (pageNumItem) {
                 AddImageInput ? $(`#${pageNumItem} .AddImageCon`).append(AddImageDiv) : false
-            } else{
+            } else {
                 AddImageInput ? $(`#page0 .AddImageCon`).append(AddImageDiv) : false
             }
             $('#AddImageInput').val('');
@@ -1041,9 +1044,9 @@
 
                 
             `;
-            if(pageNumItem){
+            if (pageNumItem) {
                 ImageTextInput ? $(`#${pageNumItem} .ImageTextCon`).append(ImageTextDiv) : false
-            } else{
+            } else {
                 ImageTextInput ? $(`#page0 .ImageTextCon`).append(ImageTextDiv) : false
             }
             $('#ImageTextInput').val('');
@@ -1069,14 +1072,14 @@
         });
 
         function noData() {
-            if(pageNumItem){
+            if (pageNumItem) {
                 noDataFunc(pageNumItem);
-            } else{
+            } else {
                 noDataFunc('page0')
             }
         }
 
-        function noDataFunc(el) { 
+        function noDataFunc(el) {
             $(`#${el} .mainContainer`).each(function () {
                 if ($(this).children().length > 0) {
                     $(`#${el} .noData`).hide();
@@ -1085,25 +1088,27 @@
                     $(`#${el} .noData`).show();
                 }
             });
-         }
+        }
     </script>
 
     <!-- Delete Page Btn -->
     <script>
-        $("#deletePageBtn").on('click', function(){
-            if(pageNumItem){
+        $("#deletePageBtn").on('click', function () {
+            if (pageNumItem) {
                 $(`#${pageNumItem}`).remove();
-            } else{
+            } else {
                 $(`#page0`).remove();
             }
             $('#pageSelect option:selected').remove();
             $(`#${$('#pageSelect option:selected').attr('data-page')}`).show();
 
-            $(`#pageSelect option`).each(function(){
+            $(`#pageSelect option`).each(function () {
                 let i = $(this).index();
                 $(this).attr('data-page', `page${i}`);
                 $('.pageContainer')[i].id = `page${i}`;
             });
+            pageNumItem = $('#pageSelect option:selected').attr('data-page');
+
         })
     </script>
 
