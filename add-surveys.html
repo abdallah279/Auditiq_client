@@ -141,7 +141,7 @@
     <div class="main-sec sec-padding main-padding-right">
         <div class="container">
 
-            <form action="branches.html">
+            <form action="survey-detailes.html">
 
                 <div class="form-section mb-4">
                     <h5 class="form-title">إضافة استبيان</h5>
@@ -173,7 +173,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row gy-4">
 
                     <div class="col-lg-4">
                         <div class="form-section surveys_sidebar">
@@ -250,113 +250,10 @@
                         <div id="simpleSubtextCon" class="mainContainer"></div>
                         <div id="multiLineCon" class="mainContainer"></div>
                         <div id="chooseOneCon" class="mainContainer"></div>
-
-                        <!--
-
-                        <div class="form-section px-4 mb-4">
-                            <div class="d-flex-between">
-                                <p>هذا النص هو مثال يمكن ان يستبدل في نفس المساحة</p>
-                                <div class="buttons flex-shrink-0">
-                                    <button type="button" class="edit_radio">
-                                        <i class="fa-regular fa-pen-to-square"></i>
-                                    </button>
-                                    <button type="button" class="delete_radio">
-                                        <i class="fa-regular fa-trash-can"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="radio_boxs mt-4">
-
-                                <div class="radio_item d-flex-between mb-3">
-                                    <div class="check-box">
-                                        <input type="checkbox" name="" id="MultipleChoice1">
-                                        <label class="check" for="MultipleChoice1"></label>
-                                        <label class="check-text ff-r" for="MultipleChoice1">
-                                            هذا النص هو مثال يمكن ان يستبدل
-                                        </label>
-                                    </div>
-                                </div>
-    
-                                <div class="radio_item d-flex-between mb-3">
-                                    <div class="check-box">
-                                        <input type="checkbox" name="" id="MultipleChoice2">
-                                        <label class="check" for="MultipleChoice2"></label>
-                                        <label class="check-text ff-r" for="MultipleChoice2">
-                                            هذا النص هو مثال يمكن ان يستبدل
-                                        </label>
-                                    </div>
-                                </div>
-    
-                            </div>
-                        </div>
-
-                        <div class="form-section px-4 mb-4">
-                            <div class="d-flex-between">
-                                <p>هذا النص هو مثال يمكن ان يستبدل في نفس المساحة</p>
-                                <div class="buttons flex-shrink-0">
-                                    <button type="button" class="edit_radio">
-                                        <i class="fa-regular fa-pen-to-square"></i>
-                                    </button>
-                                    <button type="button" class="delete_radio">
-                                        <i class="fa-regular fa-trash-can"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="rating-star align-items-start mt-4 mb-0"></div>
-                            <input type="hidden" class="rate-value">
-                        </div>
-
-                        <div class="form-section px-4 mb-4">
-                            <div class="d-flex-between">
-                                <p>هذا النص هو مثال يمكن ان يستبدل في نفس المساحة</p>
-                                <div class="buttons flex-shrink-0">
-                                    <button type="button" class="edit_radio">
-                                        <i class="fa-regular fa-pen-to-square"></i>
-                                    </button>
-                                    <button type="button" class="delete_radio">
-                                        <i class="fa-regular fa-trash-can"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="profile-img-con mt-4">
-                                <div class="profile-input">
-                                    <input type="file" id="profileImg" accept="image/*" class="hidden-input img-upload-input profile">
-                                    <label for="profileImg" class="profile-label text">
-                                        <img src="assets/imgs/icons/text_ic7.png" alt="" class="ic">
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-section px-4 mb-4">
-                            <div class="d-flex-between">
-                                <p>هذا النص هو مثال يمكن ان يستبدل في نفس المساحة</p>
-                                <div class="buttons flex-shrink-0">
-                                    <button type="button" class="edit_radio">
-                                        <i class="fa-regular fa-pen-to-square"></i>
-                                    </button>
-                                    <button type="button" class="delete_radio">
-                                        <i class="fa-regular fa-trash-can"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="profile-img-con mt-4">
-                                <div class="profile-input">
-                                    <input type="file" id="profileImg" accept="image/*" class="hidden-input img-upload-input profile">
-                                    <label for="profileImg" class="profile-label text">
-                                        <img src="assets/imgs/icons/text_ic7.png" alt="" class="ic">
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="main-input mt-4">
-                                <textarea class="input-me text-area sm"></textarea>
-                            </div>
-                        </div> -->
+                        <div id="MultipleChoiceCon" class="mainContainer"></div>
+                        <div id="StarRatingCon" class="mainContainer"></div>
+                        <div id="AddImageCon" class="mainContainer"></div>
+                        <div id="ImageTextCon" class="mainContainer"></div>
 
                         <div class="buttons mt-4">
                             <button type="submit" class="main-btn sec up">حفظ</button>
@@ -495,7 +392,8 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" data-bs-dismiss="modal" class="main-btn sec up appendBtn" id="chooseOneBtn">تأكيد</button>
+                    <button type="button" data-bs-dismiss="modal" class="main-btn sec up appendBtn"
+                        id="chooseOneBtn">تأكيد</button>
                     <button type="button" class="main-btn light" data-bs-dismiss="modal">رجوع</button>
                 </div>
 
@@ -517,53 +415,28 @@
 
                         <div class="input-g">
                             <div class="main-input">
-                                <input type="text" placeholder="ادخل النص الرئيسي" class="input-me">
+                                <input type="text" placeholder="ادخل النص الرئيسي" id="MultipleChoiceInput"
+                                    class="input-me">
                             </div>
                         </div>
 
                         <div class="input-g d-flex gap-3">
                             <div class="main-input w-100">
-                                <input type="text" placeholder="ادخل نص الاختيار" class="input-me">
+                                <input type="text" placeholder="ادخل نص الاختيار" class="input-me"
+                                    id="addCheckBoxInput">
                             </div>
-                            <button type="button" class="sm-btn lg sec flex-shrink-0 up"><i
-                                    class="fa-solid fa-plus"></i></button>
+                            <button type="button" class="sm-btn lg sec flex-shrink-0 up" id="addCheckBoxBtn">
+                                <i class="fa-solid fa-plus"></i></button>
                         </div>
 
-                        <div class="radio_boxs">
-
-                            <div class="radio_item d-flex-between mb-3">
-                                <div class="check-box">
-                                    <input type="checkbox" name="" id="MultipleChoice1">
-                                    <label class="check" for="MultipleChoice1"></label>
-                                    <label class="check-text" for="MultipleChoice1">
-                                        هذا النص هو مثال يمكن ان يستبدل
-                                    </label>
-                                </div>
-                                <button type="button" class="delete_radio">
-                                    <i class="fa-regular fa-trash-can"></i>
-                                </button>
-                            </div>
-
-                            <div class="radio_item d-flex-between mb-3">
-                                <div class="check-box">
-                                    <input type="checkbox" name="" id="MultipleChoice2">
-                                    <label class="check" for="MultipleChoice2"></label>
-                                    <label class="check-text" for="MultipleChoice2">
-                                        هذا النص هو مثال يمكن ان يستبدل
-                                    </label>
-                                </div>
-                                <button type="button" class="delete_radio">
-                                    <i class="fa-regular fa-trash-can"></i>
-                                </button>
-                            </div>
-
-                        </div>
+                        <div class="radio_boxs" id="addCheckBoxCon"></div>
 
                     </div>
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" data-bs-dismiss="modal" class="main-btn sec up appendBtn">تأكيد</button>
+                    <button type="button" data-bs-dismiss="modal" class="main-btn sec up appendBtn"
+                        id="MultipleChoiceBtn">تأكيد</button>
                     <button type="button" class="main-btn light" data-bs-dismiss="modal">رجوع</button>
                 </div>
 
@@ -584,7 +457,8 @@
 
                         <div class="input-g">
                             <div class="main-input">
-                                <input type="text" placeholder="ادخل النص الرئيسي" class="input-me">
+                                <input type="text" placeholder="ادخل النص الرئيسي" id="StarRatingInput"
+                                    class="input-me">
                             </div>
                         </div>
 
@@ -595,7 +469,8 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" data-bs-dismiss="modal" class="main-btn sec up appendBtn">تأكيد</button>
+                    <button type="button" data-bs-dismiss="modal" class="main-btn sec up appendBtn"
+                        id="StarRatingBtn">تأكيد</button>
                     <button type="button" class="main-btn light" data-bs-dismiss="modal">رجوع</button>
                 </div>
 
@@ -616,7 +491,7 @@
 
                         <div class="input-g">
                             <div class="main-input">
-                                <input type="text" placeholder="ادخل النص الرئيسي" class="input-me">
+                                <input type="text" placeholder="ادخل النص الرئيسي" id="AddImageInput" class="input-me">
                             </div>
                         </div>
 
@@ -626,7 +501,8 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" data-bs-dismiss="modal" class="main-btn sec up appendBtn">تأكيد</button>
+                    <button type="button" data-bs-dismiss="modal" class="main-btn sec up appendBtn"
+                        id="AddImageBtn">تأكيد</button>
                     <button type="button" class="main-btn light" data-bs-dismiss="modal">رجوع</button>
                 </div>
 
@@ -647,7 +523,7 @@
 
                         <div class="input-g">
                             <div class="main-input">
-                                <input type="text" placeholder="ادخل النص الرئيسي" class="input-me">
+                                <input type="text" placeholder="ادخل النص الرئيسي" id="ImageTextInput" class="input-me">
                             </div>
                         </div>
 
@@ -657,7 +533,7 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" data-bs-dismiss="modal" class="main-btn sec up appendBtn">تأكيد</button>
+                    <button type="button" data-bs-dismiss="modal" class="main-btn sec up appendBtn" id="ImageTextBtn">تأكيد</button>
                     <button type="button" class="main-btn light" data-bs-dismiss="modal">رجوع</button>
                 </div>
 
@@ -689,7 +565,7 @@
 
     <!-- Rating -->
     <script>
-        $(function () {
+        function rating() {
             let isRtlRate = $('html[lang="ar"]').length > 0;
 
             $(".rating-star").rateYo({
@@ -705,32 +581,35 @@
                     rateInput.attr('value', rating);
                 }
             });
-
-        });
-
+        };
+        rating();
     </script>
 
     <!-- Upload Img -->
     <script>
-        let loginInputs = document.querySelectorAll('.img-upload-input');
+        function uploadImg() {
+            let loginInputs = document.querySelectorAll('.img-upload-input');
 
-        loginInputs.forEach((input) => {
-            let profileImg = input.closest('.profile-img-con').querySelector('.profile-label .ic');
-            let imageSrc = profileImg.getAttribute('src');
-            input.onchange = function () {
+            loginInputs.forEach((input) => {
+                let profileImg = input.closest('.profile-img-con').querySelector('.profile-label .ic');
+                let imageSrc = profileImg.getAttribute('src');
+                input.onchange = function () {
 
-                let reader = new FileReader();
-                if (input.files[0]) {
-                    reader.readAsDataURL(input.files[0]);
-                } else {
-                    profileImg.setAttribute('src', imageSrc);
+                    let reader = new FileReader();
+                    if (input.files[0]) {
+                        reader.readAsDataURL(input.files[0]);
+                    } else {
+                        profileImg.setAttribute('src', '');
+                    }
+
+                    reader.onload = () => {
+                        profileImg.setAttribute('src', reader.result);
+                    }
                 }
+            });
+        }
 
-                reader.onload = () => {
-                    profileImg.setAttribute('src', reader.result);
-                }
-            }
-        });
+        uploadImg();
     </script>
 
     <!-- mainTextBtn -->
@@ -741,7 +620,7 @@
                 <div class="form-section d-flex-between px-4 mb-4 itemDelete">
                     <h1 class="fs-19">${mainTextInput}</h1>
                     <div class="buttons flex-shrink-0">
-                        <button type="button" class="edit_radio">
+                        <button type="button" class="edit_radio" data-bs-toggle="modal" data-bs-target="#mainText">
                             <i class="fa-regular fa-pen-to-square"></i>
                         </button>
                         <button type="button" class="delete_radio">
@@ -764,7 +643,7 @@
                 <div class="form-section d-flex-between px-4 mb-4 itemDelete">
                     <p>${simpleSubtextInput}</p>
                     <div class="buttons flex-shrink-0">
-                        <button type="button" class="edit_radio">
+                        <button type="button" class="edit_radio" data-bs-toggle="modal" data-bs-target="#simpleSubtext">
                             <i class="fa-regular fa-pen-to-square"></i>
                         </button>
                         <button type="button" class="delete_radio">
@@ -788,7 +667,7 @@
                     <div class="d-flex-between">
                         <p>${multiLineInput}</p>
                         <div class="buttons flex-shrink-0">
-                            <button type="button" class="edit_radio">
+                            <button type="button" class="edit_radio" data-bs-toggle="modal" data-bs-target="#multiLineSubtext">
                                 <i class="fa-regular fa-pen-to-square"></i>
                             </button>
                             <button type="button" class="delete_radio">
@@ -810,7 +689,7 @@
     <!-- addRadioBtn In chooseOne Modal -->
     <script>
         let radioArr = [];
-        $('#addRadioBtn').on('click', function(){
+        $('#addRadioBtn').on('click', function () {
             let addRadioInput = $('#addRadioInput').val()
             let radioItem = `
                 <div class="radio_item d-flex-between mb-3 itemDelete">
@@ -827,10 +706,19 @@
             radioArr.push(addRadioInput);
             $('#addRadioInput').val('');
             deleteDiv();
+            $('.delete_radio').on('click', function () {
+                let deletedRItem = $(this).closest('.radio_item').find('.label-radio').text();
+                for (let i = 0; i < radioArr.length; i++) {
+                    if (radioArr[i] == deletedRItem) {
+                        delete radioArr[i];
+                    }
+                }
+            })
         });
 
 
         /********* chooseOneBtn *************/
+        let count = 1;
         $('#chooseOneBtn').on('click', function () {
             let chooseOneInput = $('#chooseOneInput').val();
             let chooseOneDiv = `
@@ -838,7 +726,7 @@
                     <div class="d-flex-between">
                         <p>${chooseOneInput}</p>
                         <div class="buttons flex-shrink-0">
-                            <button type="button" class="edit_radio">
+                            <button type="button" class="edit_radio" data-bs-toggle="modal" data-bs-target="#chooseOne">
                                 <i class="fa-regular fa-pen-to-square"></i>
                             </button>
                             <button type="button" class="delete_radio">
@@ -847,28 +735,209 @@
                         </div>
                     </div>
         
-                    <div class="radio_items mt-4 radio_itemsAppended" id='radio_itemsAppended'></div>
+                    <div class="radio_items mt-4 radio_itemsAppended${count}"></div>
                 </div>
             `;
             $('#chooseOneCon').append(chooseOneDiv);
             $('#chooseOneInput').val('');
-            console.log(radioArr);
-            for(let item of radioArr){
-                let radioI = `
-                    <div class="radio_item d-flex-between mb-4">
-                        <div class="radio-box">
-                            <input type="radio" class="input-radio" name="radio1">
+            for (let item of radioArr) {
+                if (item) {
+                    let radioI = `
+                        <div class="radio-box mb-4">
+                            <input type="radio" class="input-radio" name="radio${count}">
                             <label for="" class="label-radio ff-r">${item}</label>
                         </div>
-                    </div>
-                `
-                $('.radio_itemsAppended').append(radioI);
+                    `
+                    $(`.radio_itemsAppended${count}`).append(radioI);
+                }
             }
             $('#addRadioCon').children().remove();
+            radioArr = [];
+            count++;
             deleteDiv();
         })
     </script>
 
+    <!-- addCheckBoxBtn In MultipleChoice Modal -->
+    <script>
+        let checkBoxArr = [];
+        $('#addCheckBoxBtn').on('click', function () {
+            let addCheckBoxInput = $('#addCheckBoxInput').val()
+            let checkBoxItem = `
+                <div class="radio_item d-flex-between mb-3 itemDelete">
+                    <div class="check-box">
+                        <input type="checkbox" name="" id="MultipleChoice1">
+                        <label class="check" for="MultipleChoice1"></label>
+                        <label class="check-text" for="MultipleChoice1">${addCheckBoxInput}</label>
+                    </div>
+                    <button type="button" class="delete_radio">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
+            `;
+            $('#addCheckBoxCon').append(checkBoxItem);
+            checkBoxArr.push(addCheckBoxInput);
+            $('#addCheckBoxInput').val('');
+            deleteDiv();
+            $('.delete_radio').on('click', function () {
+                let deletedRItem = $(this).closest('.radio_item').find('.check-text').text();
+                for (let i = 0; i < checkBoxArr.length; i++) {
+                    if (checkBoxArr[i] == deletedRItem) {
+                        delete checkBoxArr[i];
+                    }
+                }
+            })
+        });
+
+
+        /********* MultipleChoiceBtn *************/
+        let countCheck = 1;
+        $('#MultipleChoiceBtn').on('click', function () {
+            let MultipleChoiceInput = $('#MultipleChoiceInput').val();
+            let MultipleChoiceDiv = `
+                <div class="form-section px-4 mb-4 itemDelete">
+                    <div class="d-flex-between">
+                        <p>${MultipleChoiceInput}</p>
+                        <div class="buttons flex-shrink-0">
+                            <button type="button" class="edit_radio" data-bs-toggle="modal" data-bs-target="#MultipleChoice">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                            <button type="button" class="delete_radio">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+        
+                    <div class="radio_items mt-4 checkboxAppended${countCheck}"></div>
+                </div>
+            `;
+            $('#MultipleChoiceCon').append(MultipleChoiceDiv);
+            $('#MultipleChoiceInput').val('');
+            for (let i = 0; i < checkBoxArr.length; i++) {
+                if (checkBoxArr[i]) {
+                    let checkBoxI = `
+                        <div class="check-box mb-4">
+                            <input type="checkbox" name="MultipleChoice${countCheck}" id="MultipleChoice${countCheck + i / 2}">
+                            <label class="check" for="MultipleChoice${countCheck + i / 2}"></label>
+                            <label class="check-text ff-r" for="MultipleChoice${countCheck + i / 2}">${checkBoxArr[i]}</label>
+                        </div>
+                    `
+                    $(`.checkboxAppended${countCheck}`).append(checkBoxI);
+                }
+            }
+            $('#addCheckBoxCon').children().remove();
+            checkBoxArr = [];
+            countCheck++;
+            deleteDiv();
+        })
+    </script>
+
+    <!-- StarRatingBtn -->
+    <script>
+        $('#StarRatingBtn').on('click', function () {
+            let StarRatingInput = $('#StarRatingInput').val();
+            let StarRatingDiv = `
+                <div class="form-section px-4 mb-4 itemDelete">
+                    <div class="d-flex-between">
+                        <p>${StarRatingInput}</p>
+                        <div class="buttons flex-shrink-0">
+                            <button type="button" class="edit_radio" data-bs-toggle="modal" data-bs-target="#StarRating">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                            <button type="button" class="delete_radio">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="rating-star align-items-start mt-4 mb-0"></div>
+                    <input type="hidden" class="rate-value">
+                </div>
+            `;
+            $('#StarRatingCon').append(StarRatingDiv);
+            $('#StarRatingInput').val('');
+            deleteDiv();
+            rating();
+        })
+    </script>
+
+    <!-- AddImageBtn -->
+    <script>
+        $('#AddImageBtn').on('click', function () {
+            let AddImageInput = $('#AddImageInput').val();
+            let AddImageDiv = `
+                <div class="form-section px-4 mb-4 itemDelete">
+                    <div class="d-flex-between">
+                        <p>${AddImageInput}</p>
+                        <div class="buttons flex-shrink-0">
+                            <button type="button" class="edit_radio" data-bs-toggle="modal" data-bs-target="#AddImage">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                            <button type="button" class="delete_radio">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="profile-img-con mt-4">
+                        <div class="profile-input">
+                            <input type="file" id="profileImg" accept="image/*" class="hidden-input img-upload-input profile">
+                            <label for="profileImg" class="profile-label text">
+                                <img src="assets/imgs/icons/text_ic7.png" alt="" class="ic">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                
+            `;
+            $('#AddImageCon').append(AddImageDiv);
+            $('#AddImageInput').val('');
+            deleteDiv();
+            uploadImg();
+        })
+    </script>
+
+    <!-- ImageTextBtn -->
+    <script>
+        $('#ImageTextBtn').on('click', function () {
+            let ImageTextInput = $('#ImageTextInput').val();
+            let ImageTextDiv = `
+                <div class="form-section px-4 mb-4 itemDelete">
+                    <div class="d-flex-between">
+                        <p>${ImageTextInput}</p>
+                        <div class="buttons flex-shrink-0">
+                            <button type="button" class="edit_radio" data-bs-toggle="modal" data-bs-target="#ImageText">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                            <button type="button" class="delete_radio">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="profile-img-con mt-4">
+                        <div class="profile-input">
+                            <input type="file" id="profileImg" accept="image/*" class="hidden-input img-upload-input profile">
+                            <label for="profileImg" class="profile-label text">
+                                <img src="assets/imgs/icons/text_ic7.png" alt="" class="ic">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="main-input mt-4">
+                        <textarea class="input-me text-area sm"></textarea>
+                    </div>
+                </div>
+
+                
+            `;
+            $('#ImageTextCon').append(ImageTextDiv);
+            $('#ImageTextInput').val('');
+            deleteDiv();
+            uploadImg();
+        })
+    </script>
 
     <!-- deleteDiv -->
     <script>
@@ -886,7 +955,7 @@
             $(this).on('click', noData);
         });
 
-        function noData () {
+        function noData() {
             $('.mainContainer').each(function () {
                 if ($(this).children().length > 0) {
                     $('#noData').hide();

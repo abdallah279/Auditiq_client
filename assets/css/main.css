@@ -2411,6 +2411,7 @@ html[lang=ar] .user-img .user-camera {
 }
 .profile-img-con .profile-input .profile-label.text .ic {
   max-height: 36px;
+  max-width: 60px;
 }
 .profile-img-con .profile-input .profile-label .ic {
   max-height: 26px;
@@ -3145,26 +3146,15 @@ html[lang=ar] .dropdown-menu.drop-filter.show {
 }
 
 .pagination {
-  box-shadow: 0 0 15px 0 rgba(32, 32, 32, 0.1);
-  width: fit-content;
-  border-radius: 7px;
-  overflow: hidden;
-  margin: auto;
+  justify-content: end;
 }
 .pagination .page-item .page-link {
   border: none;
-  color: #000;
-  margin: 0 !important;
-  border-radius: 0 !important;
-  padding: 12px 18px;
-  font-size: 17px;
+  color: #202020;
+  padding: 7px;
+  font-size: 16px;
   height: 100%;
-}
-html[lang=en] .pagination .page-item .page-link {
-  border-right: 1px solid rgba(48, 152, 222, 0.7);
-}
-html[lang=ar] .pagination .page-item .page-link {
-  border-left: 1px solid rgba(48, 152, 222, 0.7);
+  font-family: fontMed;
 }
 @media screen and (max-width: 375px) {
   .pagination .page-item .page-link {
@@ -3192,26 +3182,15 @@ html[lang=ar] .pagination .page-item .page-link {
 html[lang=en] .pagination .page-item .page-link .ic i {
   transform: rotate(-180deg);
 }
-.pagination .page-item .page-link.active {
+.pagination .page-item .page-link:hover, .pagination .page-item .page-link:focus, .pagination .page-item .page-link.active {
   color: #3098de;
-  background-color: #fff;
-}
-.pagination .page-item .page-link:hover, .pagination .page-item .page-link:focus {
-  background-color: #3098de;
-  color: #fff;
-}
-.pagination .page-item .page-link:hover .ic, .pagination .page-item .page-link:focus .ic {
-  color: #fff;
-  border-color: #fff;
+  background-color: transparent;
 }
 .pagination .page-item .page-link:focus {
   box-shadow: none;
 }
-html[lang=en] .pagination .page-item:last-child .page-link {
-  border-right: 0;
-}
-html[lang=ar] .pagination .page-item:last-child .page-link {
-  border-left: 0;
+.pagination .page-item:last-child .page-link, .pagination .page-item:first-child .page-link {
+  color: #3098de;
 }
 
 .navbar-m {
@@ -3659,6 +3638,11 @@ html[lang=ar] .main-padding-right {
   display: flex;
   gap: 10px;
 }
+@media screen and (max-width: 576px) {
+  .input_btns {
+    flex-direction: column;
+  }
+}
 .input_btns .main-input {
   flex: 1;
 }
@@ -3693,6 +3677,11 @@ html[lang=ar] .main-padding-right {
   max-width: 340px;
   display: block;
   margin: 0 auto;
+}
+@media screen and (max-width: 576px) {
+  .no_data {
+    max-width: 240px;
+  }
 }
 
 /**************** End Surveys Section *************/
