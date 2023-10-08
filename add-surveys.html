@@ -229,31 +229,31 @@
 
                         <div class="input_btns mb-4">
                             <div class="main-input">
-                                <select name="" id="" class="select">
-                                    <option value="">الصفحة الأولى</option>
-                                    <option value="">الصفحة الثانية</option>
-                                    <option value="">الصفحة الثالثة</option>
-                                    <option value="">الصفحة الرابعة</option>
-                                    <option value="">الصفحة الخامسه</option>
+                                <select name="" class="select" id="pageSelect">
+                                    <option value="" data-page="page0">الصفحة الأولى</option>
                                 </select>
                             </div>
 
-                            <button type="button" class="main-btn sec up">إضافة صفحة</button>
-                            <button type="button" class="main-btn red-transparent">حذف الصفحة</button>
+                            <button type="button" class="main-btn sec up" data-bs-toggle="modal" data-bs-target="#AddPageModal">إضافة صفحة</button>
+                            <button type="button" class="main-btn red-transparent" id="deletePageBtn">حذف الصفحة</button>
                         </div>
 
-                        <div class="form-section" id="noData">
-                            <img src="./assets/imgs/no-data.png" alt="" class="no_data">
-                        </div>
+                        <div id="allPageContainer">
 
-                        <div id="mainTextCon" class="mainContainer"></div>
-                        <div id="simpleSubtextCon" class="mainContainer"></div>
-                        <div id="multiLineCon" class="mainContainer"></div>
-                        <div id="chooseOneCon" class="mainContainer"></div>
-                        <div id="MultipleChoiceCon" class="mainContainer"></div>
-                        <div id="StarRatingCon" class="mainContainer"></div>
-                        <div id="AddImageCon" class="mainContainer"></div>
-                        <div id="ImageTextCon" class="mainContainer"></div>
+                            <div id="page0" class="pageContainer">
+                                <div class="form-section noData">
+                                    <img src="./assets/imgs/no-data.png" alt="" class="no_data">
+                                </div>
+                                <div class="mainContainer mainTextCon"></div>
+                                <div class="mainContainer simpleSubtextCon"></div>
+                                <div class="mainContainer multiLineCon"></div>
+                                <div class="mainContainer chooseOneCon"></div>
+                                <div class="mainContainer MultipleChoiceCon"></div>
+                                <div class="mainContainer StarRatingCon"></div>
+                                <div class="mainContainer AddImageCon"></div>
+                                <div class="mainContainer ImageTextCon"></div>
+                            </div>
+                        </div>
 
                         <div class="buttons mt-4">
                             <button type="submit" class="main-btn sec up">حفظ</button>
@@ -274,6 +274,33 @@
 
 
     <!-- ******************* Modals ******************** -->
+
+    <!-- Start AddPageModal Modal -->
+    <div class="modal fade" id="AddPageModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <form action="" class="modal-content">
+
+                <div class="modal-body center">
+                    <h5 class="form-title mb-0">اضافة صفحة جديدة</h5>
+
+                    <div class="w-100 mt-4">
+
+                        <div class="main-input">
+                            <input type="text" placeholder="ادخل اسم الصفحة" class="input-me" id="AddPageInput">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" data-bs-dismiss="modal" class="main-btn sec up appendBtn"
+                        id="AddPageBtn">تأكيد</button>
+                    <button type="button" class="main-btn light" data-bs-dismiss="modal">رجوع</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
 
     <!-- Start Main Text Modal -->
     <div class="modal fade" id="mainText" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
@@ -533,7 +560,8 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" data-bs-dismiss="modal" class="main-btn sec up appendBtn" id="ImageTextBtn">تأكيد</button>
+                    <button type="button" data-bs-dismiss="modal" class="main-btn sec up appendBtn"
+                        id="ImageTextBtn">تأكيد</button>
                     <button type="button" class="main-btn light" data-bs-dismiss="modal">رجوع</button>
                 </div>
 
@@ -612,6 +640,59 @@
         uploadImg();
     </script>
 
+    <!-- Change Select -->
+    <script>
+        let pageNumItem = '';
+        $('.pageContainer:not(:first)').hide();
+        $("#pageSelect").change(function () {
+            let pageNum = $(this).find('option:selected').attr('data-page');
+            $('.pageContainer').hide();
+            $(`#${pageNum}`).show();
+            pageNumItem = pageNum;
+        });
+    </script>
+
+    <!-- Add Page Btn -->
+    <script>
+        $('#AddPageBtn').on('click', function () {
+            let selectLength = $("#pageSelect").children().length;
+            let AddPageInput = $('#AddPageInput').val();
+            let AddPageName = `
+                <option value="" data-page="page${selectLength}">${AddPageInput}</option>
+            `;
+
+            let pageContent = `
+                <div id="page${selectLength}" class="pageContainer">
+                    <div class="form-section noData">
+                        <img src="./assets/imgs/no-data.png" alt="" class="no_data">
+                    </div>
+                    <div class="mainContainer mainTextCon"></div>
+                    <div class="mainContainer simpleSubtextCon"></div>
+                    <div class="mainContainer multiLineCon"></div>
+                    <div class="mainContainer chooseOneCon"></div>
+                    <div class="mainContainer MultipleChoiceCon"></div>
+                    <div class="mainContainer StarRatingCon"></div>
+                    <div class="mainContainer AddImageCon"></div>
+                    <div class="mainContainer ImageTextCon"></div>
+                </div>
+            `;
+            $(`#pageSelect`).append(AddPageName);
+            $(`#allPageContainer`).append(pageContent);
+            $(`#pageSelect option`).each(function(){
+                let i = $(this).index();
+                $(this).attr('data-page', `page${i}`);
+                $('.pageContainer')[i].id = `page${i}`;
+            });
+            $('#AddPageInput').val('');
+            $('.pageContainer').hide();
+            if(pageNumItem){
+                $(`#${pageNumItem}`).show();
+            } else{
+                $(`#page0`).show();
+            }
+        })
+    </script>
+
     <!-- mainTextBtn -->
     <script>
         $('#mainTextBtn').on('click', function () {
@@ -629,7 +710,11 @@
                     </div>
                 </div>
             `;
-            $('#mainTextCon').append(mainTextDiv);
+            if(pageNumItem){
+                mainTextInput ? $(`#${pageNumItem} .mainTextCon`).append(mainTextDiv) : false
+            } else{
+                mainTextInput ? $(`#page0 .mainTextCon`).append(mainTextDiv) : false
+            }
             $('#mainTextInput').val('');
             deleteDiv();
         })
@@ -652,7 +737,11 @@
                     </div>
                 </div>
             `;
-            $('#simpleSubtextCon').append(simpleSubtextDiv);
+            if(pageNumItem){
+                simpleSubtextInput ? $(`#${pageNumItem} .simpleSubtextCon`).append(simpleSubtextDiv) : false
+            } else{
+                simpleSubtextInput ? $(`#page0 .simpleSubtextCon`).append(simpleSubtextDiv) : false
+            }
             $('#simpleSubtextInput').val('');
             deleteDiv();
         })
@@ -680,7 +769,11 @@
                     </div>
                 </div>
             `;
-            $('#multiLineCon').append(multiLineDiv);
+            if(pageNumItem){
+                multiLineInput ? $(`#${pageNumItem} .multiLineCon`).append(multiLineDiv) : false
+            } else{
+                multiLineInput ? $(`#page0 .multiLineCon`).append(multiLineDiv) : false
+            }
             $('#multiLineInput').val('');
             deleteDiv();
         })
@@ -738,7 +831,11 @@
                     <div class="radio_items mt-4 radio_itemsAppended${count}"></div>
                 </div>
             `;
-            $('#chooseOneCon').append(chooseOneDiv);
+            if(pageNumItem){
+                chooseOneInput ? $(`#${pageNumItem} .chooseOneCon`).append(chooseOneDiv) : false
+            } else{
+                chooseOneInput ? $(`#page0 .chooseOneCon`).append(chooseOneDiv) : false
+            }
             $('#chooseOneInput').val('');
             for (let item of radioArr) {
                 if (item) {
@@ -811,7 +908,11 @@
                     <div class="radio_items mt-4 checkboxAppended${countCheck}"></div>
                 </div>
             `;
-            $('#MultipleChoiceCon').append(MultipleChoiceDiv);
+            if(pageNumItem){
+                MultipleChoiceInput ? $(`#${pageNumItem} .MultipleChoiceCon`).append(MultipleChoiceDiv) : false
+            } else{
+                MultipleChoiceInput ? $(`#page0 .MultipleChoiceCon`).append(MultipleChoiceDiv) : false
+            }
             $('#MultipleChoiceInput').val('');
             for (let i = 0; i < checkBoxArr.length; i++) {
                 if (checkBoxArr[i]) {
@@ -854,7 +955,11 @@
                     <input type="hidden" class="rate-value">
                 </div>
             `;
-            $('#StarRatingCon').append(StarRatingDiv);
+            if(pageNumItem){
+                StarRatingInput ? $(`#${pageNumItem} .StarRatingCon`).append(StarRatingDiv) : false
+            } else{
+                StarRatingInput ? $(`#page0 .StarRatingCon`).append(StarRatingDiv) : false
+            }
             $('#StarRatingInput').val('');
             deleteDiv();
             rating();
@@ -891,7 +996,11 @@
 
                 
             `;
-            $('#AddImageCon').append(AddImageDiv);
+            if(pageNumItem){
+                AddImageInput ? $(`#${pageNumItem} .AddImageCon`).append(AddImageDiv) : false
+            } else{
+                AddImageInput ? $(`#page0 .AddImageCon`).append(AddImageDiv) : false
+            }
             $('#AddImageInput').val('');
             deleteDiv();
             uploadImg();
@@ -932,7 +1041,11 @@
 
                 
             `;
-            $('#ImageTextCon').append(ImageTextDiv);
+            if(pageNumItem){
+                ImageTextInput ? $(`#${pageNumItem} .ImageTextCon`).append(ImageTextDiv) : false
+            } else{
+                ImageTextInput ? $(`#page0 .ImageTextCon`).append(ImageTextDiv) : false
+            }
             $('#ImageTextInput').val('');
             deleteDiv();
             uploadImg();
@@ -956,15 +1069,42 @@
         });
 
         function noData() {
-            $('.mainContainer').each(function () {
+            if(pageNumItem){
+                noDataFunc(pageNumItem);
+            } else{
+                noDataFunc('page0')
+            }
+        }
+
+        function noDataFunc(el) { 
+            $(`#${el} .mainContainer`).each(function () {
                 if ($(this).children().length > 0) {
-                    $('#noData').hide();
+                    $(`#${el} .noData`).hide();
                     return false;
                 } else {
-                    $('#noData').show();
+                    $(`#${el} .noData`).show();
                 }
             });
-        }
+         }
+    </script>
+
+    <!-- Delete Page Btn -->
+    <script>
+        $("#deletePageBtn").on('click', function(){
+            if(pageNumItem){
+                $(`#${pageNumItem}`).remove();
+            } else{
+                $(`#page0`).remove();
+            }
+            $('#pageSelect option:selected').remove();
+            $(`#${$('#pageSelect option:selected').attr('data-page')}`).show();
+
+            $(`#pageSelect option`).each(function(){
+                let i = $(this).index();
+                $(this).attr('data-page', `page${i}`);
+                $('.pageContainer')[i].id = `page${i}`;
+            });
+        })
     </script>
 
     <!-- Main Js -->
